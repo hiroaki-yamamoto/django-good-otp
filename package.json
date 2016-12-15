@@ -1,0 +1,28 @@
+{
+  "name": "django_good_otp",
+  "version": "1.0.0",
+  "description": "Yet Another Implementation of One-Time-Password-Authentication for Django",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "$(npm bin)/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiroaki-yamamoto/django-good-otp.git"
+  },
+  "keywords": [
+    "python",
+    "OTP",
+    "Django"
+  ],
+  "author": "Hiroaki Yamamoto <@hiroaki-yamamoto at github>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiroaki-yamamoto/django-good-otp/issues"
+  },
+  "homepage": "https://github.com/hiroaki-yamamoto/django-good-otp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "hyamamoto-job-toolbox": "^0.2.6"
+  }
+}
