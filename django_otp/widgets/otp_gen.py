@@ -3,10 +3,10 @@
 
 """OTP Generator Widget."""
 
-from django.forms.widgets import Widget
+from django.forms.widgets import TextInput
 
 
-class OTPGenWidget(Widget):
+class OTPGenWidget(TextInput):
     """OTP Generator widget."""
 
     def __init__(self, *args, **kwargs):
