@@ -11,7 +11,7 @@ package_dct = {}
 with open(join(dirname(__file__), "package.json")) as package:
     package_dct = json.load(package)
 
-dependencies = ["pyotp"]
+dependencies = ["pyotp", "django"]
 keywords = (" ").join(package_dct["keywords"])
 
 author = "Hiroaki Yamamoto"
@@ -26,21 +26,24 @@ try:
 except Exception:
     long_desc = None
 
-setup(
-    **{
-        key: value for (key, value) in package_dct.items()
-        if key in {
-            "name", "description", "url", "license", "version"
-        }
-    },
-    long_description=long_desc,
-    packages=find_packages(exclude=["tests"]),
-    install_requires=dependencies,
-    zip_safe=False,
-    keywords=keywords,
-    classifiers=[
+setup_kwargs = {
+    key: value for (key, value) in package_dct.items()
+    if key in {
+        "name", "description", "url", "license", "version"
+    }
+}
+setup_kwargs.update({
+    "long_description": long_desc,
+    "packages": find_packages(exclude=["tests"]),
+    "files": ["package.json"],
+    "install_requires": dependencies,
+    "zip_safe": False,
+    "keywords": keywords,
+    "classifiers": [
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.5"
     ]
-)
+})
+
+setup(**setup_kwargs)
