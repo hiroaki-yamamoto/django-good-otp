@@ -40,6 +40,7 @@ htmlcov/
 .tox/
 .coverage
 .coverage.*
+*.coverage
 .cache
 nosetests.xml
 coverage.xml
@@ -136,4 +137,3 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
-

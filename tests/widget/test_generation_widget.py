@@ -27,6 +27,10 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
         """OTP Image attributes should be empty."""
         self.assertDictEqual({}, self.widget.attrs)
 
+    def test_img_flag(self):
+        """By default, self.enable_img should be True."""
+        self.assertTrue(self.widget.enable_img)
+
 
 class OTPGenWidgetInitWithTextAttrTest(TestCase):
     """OTP Generator Widget Init with text attr test."""
@@ -62,7 +66,7 @@ class OTPGenWidgetInitWithImgAttrTest(TestCase):
         self.assertDictEqual(self.img_attrs, self.widget.img_attrs)
 
 
-class OTPWidgetInitWithBothAttrTest(TestCase):
+class OTPGenWidgetInitWithBothAttrTest(TestCase):
     """OTP Generator init with img and txt attrs test."""
 
     def setUp(self):
@@ -80,3 +84,15 @@ class OTPWidgetInitWithBothAttrTest(TestCase):
     def test_param_img(self):
         """OTP image input attrs should be proper."""
         self.assertDictEqual(self.img_attrs, self.widget.img_attrs)
+
+
+class OTPGenWidgetInitImgDiasbledTest(TestCase):
+    """OTPGenerator init with image disabled test."""
+
+    def setUp(self):
+        """Setup."""
+        self.widget = OTPGenWidget(enable_img=False)
+
+    def test_img_flag(self):
+        """enable_img flag should be false."""
+        self.assertFalse(self.widget.enable_img)
