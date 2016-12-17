@@ -3,6 +3,10 @@
 
 """OTP widgets tests."""
 
+try:
+    from unittest.mock import patch  # noqa
+except ImportError:
+    from mock import patch  # noqa
 
 from django import setup
 from django.test import TestCase
