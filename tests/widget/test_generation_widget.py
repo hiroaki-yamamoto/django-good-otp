@@ -4,9 +4,9 @@
 """OTP widgets tests."""
 
 try:
-    from unittest.mock import patch
+    from unittest.mock import patch, call
 except ImportError:
-    from mock import patch
+    from mock import patch, call
 
 from django import setup
 from django.test import TestCase
@@ -58,9 +58,10 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
             "django_otp.widgets.otp_gen", "files"
         )
         self.env.assert_called_once_with(loader=self.loader.return_value)
-        self.env.return_value.get_template.assert_called_once_with(
-            "widget.html"
-        )
+        self.assertEqual(self.env.return_value.get_template.call_count, 3)
+        self.env.return_value.get_template.has_calls((
+            call("img.html"), call("button.html"), call("widget.html")
+        ))
         self.assertIs(ret, self.env.return_value.get_template.return_value)
 
 

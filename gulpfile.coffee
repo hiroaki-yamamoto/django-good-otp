@@ -11,6 +11,7 @@ taskDep = if needOneTime then ["python.tox.only", "coffee"] else []
 g.task "default", taskDep, ->
   if not needOneTime
     g.watch [
-      "tests/**/*.py", "django_otp/**/*.py", "setup.py"
+      "tests/**/*.py", "django_otp/**/*.py", "django_otp/widgets/files/*",
+      "setup.py",
     ], ["python.tox.only"]
     # g.watch ["django_otp/**/*.coffee"], ["coffee"]

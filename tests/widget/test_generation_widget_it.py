@@ -22,6 +22,10 @@ class OTPGenWidgetTemplateLoadTest(TestCase):
         self.env = Environment(
             loader=PackageLoader("django_otp.widgets", "files")
         )
+        self.env.globals.update({
+            "btn": self.widget.btn,
+            "img": self.widget.img
+        })
 
     def test_template_load(self):
         """The template should be compiled properly."""
