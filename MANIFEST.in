@@ -1,1 +1,3 @@
 include package.json
+include django_otp/files/*
+include django_otp/static/*
