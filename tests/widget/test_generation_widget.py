@@ -25,11 +25,15 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
 
     def test_param_img(self):
         """OTP Image attributes should be empty."""
-        self.assertDictEqual({}, self.widget.attrs)
+        self.assertDictEqual({}, self.widget.img_attrs)
 
     def test_img_flag(self):
         """By default, self.enable_img should be True."""
         self.assertTrue(self.widget.enable_img)
+
+    def test_btn_attr(self):
+        """Button argument should be empty."""
+        self.assertDictEqual({}, self.widget.btn_attrs)
 
 
 class OTPGenWidgetInitWithTextAttrTest(TestCase):
@@ -48,6 +52,10 @@ class OTPGenWidgetInitWithTextAttrTest(TestCase):
         """OTP Image attributes should be empty."""
         self.assertDictEqual({}, self.widget.img_attrs)
 
+    def test_btn_attr(self):
+        """Button argument should be empty."""
+        self.assertDictEqual({}, self.widget.btn_attrs)
+
 
 class OTPGenWidgetInitWithImgAttrTest(TestCase):
     """OTP Generator Init with img attr test."""
@@ -65,25 +73,30 @@ class OTPGenWidgetInitWithImgAttrTest(TestCase):
         """OTP image input attrs should be proper."""
         self.assertDictEqual(self.img_attrs, self.widget.img_attrs)
 
+    def test_btn_attr(self):
+        """Button argument should be empty."""
+        self.assertDictEqual({}, self.widget.btn_attrs)
 
-class OTPGenWidgetInitWithBothAttrTest(TestCase):
-    """OTP Generator init with img and txt attrs test."""
+
+class OTPgenWidgetButtonAttrTest(TestCase):
+    """OTPGenerator init with button attr test."""
 
     def setUp(self):
         """Setup."""
-        self.img_attrs = {"data-ng-src": "{{ model.secret }}"}
-        self.txt_attrs = {"data-ng-model": "model.secret"}
-        self.widget = OTPGenWidget(
-            img_attrs=self.img_attrs, attrs=self.txt_attrs
-        )
+        self.btn_attrs = {"data-ng-click": "test()"}
+        self.widget = OTPGenWidget(btn_attrs=self.btn_attrs)
 
-    def test_param_txt(self):
-        """OTP text input attrs should be proper."""
-        self.assertDictEqual(self.widget.attrs, self.txt_attrs)
+    def text_param_txt(self):
+        """OTP text input attrs should be empty."""
+        self.assertDictEqual({}, self.widget.attrs)
 
     def test_param_img(self):
-        """OTP image input attrs should be proper."""
-        self.assertDictEqual(self.img_attrs, self.widget.img_attrs)
+        """OTP Image attributes should be empty."""
+        self.assertDictEqual({}, self.widget.img_attrs)
+
+    def test_btn_attr(self):
+        """Button argument should be empty."""
+        self.assertDictEqual(self.btn_attrs, self.widget.btn_attrs)
 
 
 class OTPGenWidgetInitImgDiasbledTest(TestCase):

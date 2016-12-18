@@ -11,7 +11,7 @@ package_dct = {}
 with open(join(dirname(__file__), "package.json")) as package:
     package_dct = json.load(package)
 
-dependencies = ["pyotp", "django"]
+dependencies = ("pyotp", "django", "jinja2")
 keywords = (" ").join(package_dct["keywords"])
 
 author = "Hiroaki Yamamoto"

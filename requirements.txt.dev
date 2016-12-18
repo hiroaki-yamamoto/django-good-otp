@@ -1,6 +1,7 @@
-Django==1.10.4
 flake8==3.2.1
 flake8-docstrings==1.0.2
+Jinja2==2.8
+MarkupSafe==0.23
 mccabe==0.5.3
 pluggy==0.4.0
 py==1.4.31
