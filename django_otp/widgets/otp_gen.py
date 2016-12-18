@@ -12,5 +12,6 @@ class OTPGenWidget(TextInput):
     def __init__(self, *args, **kwargs):
         """Init the instance."""
         self.img_attrs = kwargs.pop("img_attrs", None) or {}
+        self.btn_attrs = kwargs.pop("btn_attrs", None) or {}
         self.enable_img = bool(kwargs.pop("enable_img", True))
         super(OTPGenWidget, self).__init__(*args, **kwargs)
