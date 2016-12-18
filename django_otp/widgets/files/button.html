@@ -1,0 +1,1 @@
+<button{% if widget.btn_attrs %}{%for (key, value) in widget.btn_attrs.items()%} {{ key }}="{{ value }}"{% endfor %}{% endif %}>{{ widget.btn_label }}</button>
