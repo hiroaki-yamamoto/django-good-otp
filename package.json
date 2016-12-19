@@ -25,6 +25,7 @@
     "eslint": "^3.12.2",
     "eslint-config-google": "^0.7.1",
     "gulp": "^3.9.1",
-    "hyamamoto-job-toolbox": "^0.2.6"
+    "hyamamoto-job-toolbox": "^0.2.6",
+    "karma-coverage": "^1.1.1"
   }
 }

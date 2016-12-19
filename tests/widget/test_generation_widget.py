@@ -64,6 +64,10 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
         ))
         self.assertIs(ret, self.env.return_value.get_template.return_value)
 
+    def test_script_flag(self):
+        """embed_script should be false by default."""
+        self.assertIs(self.widget.embed_script, False)
+
 
 class OTPGenWidgetInitWithTextAttrTest(TestCase):
     """OTP Generator Widget Init with text attr test."""
@@ -155,3 +159,17 @@ class OTPGenWidgetBtnDisabledTest(TestCase):
     def test_btn_flag(self):
         """By default, self.enable_btn should be False."""
         self.assertFalse(self.widget.enable_btn)
+
+
+class OTPGenWidgetEmbedScriptEnabledtest(TestCase):
+    """OTPGenerator with embed script test."""
+
+    @patch("django_otp.widgets.otp_gen.Environment")
+    @patch("django_otp.widgets.otp_gen.PackageLoader")
+    def setUp(self, *args):
+        """Setup."""
+        self.widget = OTPGenWidget(embed_script=True)
+
+    def test_script_flag(self):
+        """embed_script should be true by default."""
+        self.assertIs(self.widget.embed_script, True)

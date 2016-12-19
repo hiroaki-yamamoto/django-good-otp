@@ -1,7 +1,7 @@
 {%if widget.enable_img -%}
 {{ img({"widget": widget}) -}}
 {%- endif %}
-<input type="text"{% if widget.attrs %}{%for (key, value) in widget.attrs.items()%} {{ key }}="{{ value }}"{% endfor %}{% endif %}>
+<input type="text" readonly{% if widget.attrs %}{%for (key, value) in widget.attrs.items()%} {{ key }}="{{ value }}"{% endfor %}{% endif %}>
 {% if widget.enable_btn -%}
 {{ btn({"widget": widget}) -}}
 {%- endif %}

@@ -137,3 +137,9 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
+
+# asset.js should be excluded because it is an auto-generated file.
+asset.js
+
+# Browser coverage files
+browser_coverage

@@ -18,6 +18,7 @@ class OTPGenWidget(TextInput):
         self.btn_label = kwargs.pop("btn_label", None) or "Generate Secret"
         self.enable_img = bool(kwargs.pop("enable_img", True))
         self.enable_btn = bool(kwargs.pop("enable_btn", True))
+        self.embed_script = bool(kwargs.pop("embed_script", False))
         self.__env = Environment(loader=PackageLoader(__name__, "files"))
         self.img = self.__env.get_template("img.html").render
         self.btn = self.__env.get_template("button.html").render
