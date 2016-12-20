@@ -22,10 +22,12 @@ class OTPGenWidget(TextInput):
         self.__env = Environment(loader=PackageLoader(__name__, "files"))
         self.img = self.__env.get_template("img.html").render
         self.btn = self.__env.get_template("button.html").render
+        self.btn_attrs.setdefault("type", "button")
+        self.script = self.__env.get_template("assets.js")
         self.__env.globals.update({
             "img": self.img,
-            "btn": self.btn
+            "btn": self.btn,
+            "script": self.script
         })
         self.template = self.__env.get_template("widget.html")
-        self.btn_attrs.setdefault("type", "button")
         super(OTPGenWidget, self).__init__(*args, **kwargs)

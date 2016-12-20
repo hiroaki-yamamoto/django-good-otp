@@ -58,9 +58,10 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
             "django_otp.widgets.otp_gen", "files"
         )
         self.env.assert_called_once_with(loader=self.loader.return_value)
-        self.assertEqual(self.env.return_value.get_template.call_count, 3)
+        self.assertEqual(self.env.return_value.get_template.call_count, 4)
         self.env.return_value.get_template.has_calls((
-            call("img.html"), call("button.html"), call("widget.html")
+            call("img.html"), call("button.html"), call("widget.html"),
+            call("assets.js")
         ))
         self.assertIs(ret, self.env.return_value.get_template.return_value)
 
