@@ -3,6 +3,7 @@
 
 """OTP Generator Widget."""
 
+from copy import copy
 from django.forms.widgets import TextInput
 
 from jinja2 import Environment, PackageLoader
@@ -31,3 +32,12 @@ class OTPGenWidget(TextInput):
         })
         self.template = self.__env.get_template("widget.html")
         super(OTPGenWidget, self).__init__(*args, **kwargs)
+
+    def render(self, name, value, attrs=None):
+        """Render the widegt."""
+        additional_attrs = copy(attrs)
+        if value is not None:
+            additional_attrs.setdefault("value", value)
+        return self.template.render({
+            "widget": self, "attrs": additional_attrs
+        })
