@@ -3,15 +3,12 @@
 
 """OTP Secret key generator field."""
 
-from django import setup
 from django.test import TestCase
 
 from django.forms import Form
 
 from django_otp.fields import OTPGenField
 from django_otp.widgets import OTPGenWidget
-
-setup()
 
 
 class OTPGenFieldTestBase(object):

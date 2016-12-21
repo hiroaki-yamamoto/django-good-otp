@@ -3,14 +3,11 @@
 
 """Otp secret generator integration test."""
 
-from django import setup
 from django.test import TestCase
 
 from django_otp.widgets import OTPGenWidget
 
 from jinja2 import Environment, PackageLoader
-
-setup()
 
 
 class OTPGenWidgetTemplateLoadTest(TestCase):

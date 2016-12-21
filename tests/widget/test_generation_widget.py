@@ -8,12 +8,9 @@ try:
 except ImportError:
     from mock import patch, call
 
-from django import setup
 from django.test import TestCase
 
 from django_otp.widgets import OTPGenWidget
-
-setup()
 
 
 class OTPGenWidgetInitWithoutAttrTest(TestCase):
