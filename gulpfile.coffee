@@ -4,7 +4,7 @@ karmaConf = require "./etc/karma.conf.coffee"
 needOneTime = toolbox.helper.isProduction or process.env.node_mode is "init"
 karmaConf.singleRun = needOneTime
 
-toolbox.python "", "django_otp"
+toolbox.python "", "django_otp", undefined, undefined, undefined, "migrations"
 toolbox.karma "", "django_otp", [], [], karmaConf
 toolbox.coffee(
   "widgets.", "django_otp", "django_otp/widgets/files", undefined,

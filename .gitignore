@@ -143,3 +143,5 @@ asset.js
 
 # Browser coverage files
 browser_coverage
+
+devel.db

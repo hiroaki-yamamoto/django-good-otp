@@ -1,3 +1,5 @@
 include package.json
-include django_otp/files/*
-include django_otp/static/*
+recursive-include django_otp/files
+recursive-include django_otp/static
+exclude manage.py
+exclude settings.py
