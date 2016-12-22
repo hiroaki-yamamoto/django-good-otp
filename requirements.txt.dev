@@ -1,3 +1,4 @@
+Django==1.10.4
 flake8==3.2.1
 flake8-docstrings==1.0.2
 Jinja2==2.8
