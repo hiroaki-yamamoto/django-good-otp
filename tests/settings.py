@@ -13,5 +13,6 @@ DATABASES = {
         'NAME': "devel.db"
     }
 }
+PASSWORD_HASHERS = ("django.contrib.auth.hashers.UnsaltedMD5PasswordHasher",)
 
 USE_I18N = True

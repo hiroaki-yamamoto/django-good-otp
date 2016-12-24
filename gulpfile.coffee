@@ -18,7 +18,7 @@ g.task "default", taskDep, ->
     g.start "karma.server"
     g.watch [
       "tests/**/*.py", "django_otp/**/*.py", "django_otp/widgets/files/*",
-      "setup.py",
+      "setup.py", "tox.ini"
     ], ["python.tox.only"]
     g.watch [
       "django_otp/widgets/coffee/**/*.coffee"
