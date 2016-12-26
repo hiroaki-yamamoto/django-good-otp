@@ -38,17 +38,22 @@ class AuthenticationBackendTest(TestCase):
                 password=("pw_{}").format(counter)
             ) for counter in range(2)
         ]
-        self.otp_secrets = OTPSecrets.objects.create(
-            user=self.users[0], secret=("").join([
-                random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ234567")
-                for ignore in range(16)
-            ])
+        self.otp_secret = OTPSecrets.objects.create(
+            user=self.users[0], secret=self.__gen_otp_secret()
         )
         self.req = RequestFactory().get("/test")
+
+    def __gen_otp_secret(self):
+        """Generate OTP secret."""
+        return ("").join([
+            random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ234567")
+            for ignore in range(16)
+        ])
 
     @patch("django_otp.backends.ModelBackend.authenticate")
     def test_backend(self, auth):
         """Auth function should be called."""
+        delattr(auth.return_value, "otp_secret")
         self.backend.authenticate(
             self.req, username="example", password="test",
             otp_auth=999999
@@ -63,3 +68,25 @@ class AuthenticationBackendTest(TestCase):
             self.req, username=self.users[1].username, password="pw_1"
         )
         self.assertEqual(user, self.users[1])
+
+    def test_user_auth_failure_otp(self):
+        """The authentication should be failed with OTP."""
+        from pyotp.totp import TOTP
+        provider = TOTP(self.otp_secret.secret)
+        user = self.backend.authenticate(
+            self.req, username=self.users[0].username, password="pw_0",
+            otp_auth=str(
+                (int(provider.now()) + 1) % 1000000
+            ).zfill(provider.digits)
+        )
+        self.assertIsNone(user)
+
+    def test_user_auth_success_otp(self):
+        """The authentication should be succeeded with OTP."""
+        from pyotp.totp import TOTP
+        provider = TOTP(self.otp_secret.secret)
+        user = self.backend.authenticate(
+            self.req, username=self.users[0].username, password="pw_0",
+            otp_auth=provider.now()
+        )
+        self.assertEqual(user, self.users[0])

@@ -9,6 +9,7 @@ or inherit them.
 """
 
 from django.contrib.auth.backends import ModelBackend
+from pyotp import TOTP
 
 
 class OTPAuthenticationBackend(ModelBackend):
@@ -21,6 +22,10 @@ class OTPAuthenticationBackend(ModelBackend):
         user = super(OTPAuthenticationBackend, self).authenticate(
             request=request, username=username, password=password, **kwargs
         )
+        if hasattr(user, "otp_secret"):
+            auth_provider = TOTP(user.otp_secret.secret)
+            if not auth_provider.verify(otp_auth):
+                user = None
         return user
 
 
