@@ -23,3 +23,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'devel.db'),
     }
 }
+
+PASSWORD_HASHERS = ("django.contrib.auth.hashers.UnsaltedMD5PasswordHasher",)
+AUTHENTICATION_BACKENDS = ("django_otp.backends.OTPAuthBackend", )
+
+USE_I18N = True

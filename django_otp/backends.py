@@ -15,13 +15,11 @@ from pyotp import TOTP
 class OTPAuthenticationBackend(ModelBackend):
     """OTPAuthenticationBackend."""
 
-    def authenticate(
-        self, request, username=None, password=None, otp_auth=None, **kwargs
-    ):
+    def authenticate(self, **kwargs):
         """Authentication form."""
-        user = super(OTPAuthenticationBackend, self).authenticate(
-            request=request, username=username, password=password, **kwargs
-        )
+        otp_auth = kwargs.pop("otp_auth", None)
+
+        user = super(OTPAuthenticationBackend, self).authenticate(**kwargs)
         if hasattr(user, "otp_secret"):
             auth_provider = TOTP(user.otp_secret.secret)
             if not auth_provider.verify(otp_auth):
