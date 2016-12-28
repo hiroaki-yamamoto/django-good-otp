@@ -20,9 +20,14 @@ class QRCodeView(View):
     def get(self, req, secret):
         """GET request."""
         result = bytes()
+        otp_uri_kwargs = {
+            key: value for (key, value) in req.GET.items() if key in (
+                "name", "issuer_name"
+            )
+        }
         with BytesIO() as stream:
             generate_qrcode(
-                build_otp_uri(secret), image_factory=svg
+                build_otp_uri(secret, **otp_uri_kwargs), image_factory=svg
             ).save(stream)
             result = stream.getvalue()
         return HttpResponse(
