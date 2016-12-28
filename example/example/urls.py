@@ -20,6 +20,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from django_otp.admin import OTPAdmin
+from django_otp.forms import AuthenticationForm
+
+OTPAdmin.enable()
+
+
+class AdminSite(admin.AdminSite):
+    """Admin site."""
+    login_form = AuthenticationForm
+
+
+admin.site = AdminSite("otpadminsite")
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
