@@ -4,7 +4,9 @@
 """OTP Admin Panel."""
 
 from django.contrib import admin
+from os import path
 from .models import OTPSecrets
+from .forms import AuthenticationForm
 
 
 class OTPAdmin(admin.ModelAdmin):
@@ -20,3 +22,13 @@ class OTPAdmin(admin.ModelAdmin):
     def enable(cls):
         """Assign the model to the panel."""
         admin.site.register(OTPSecrets, cls)
+
+
+class AdminSite(admin.AdminSite):
+    """AdminSite."""
+
+    login_form = AuthenticationForm
+    login_template = path.join(
+        path.abspath(path.dirname(__file__)),
+        "templates", "1_10", "login.html"
+    )
