@@ -23,6 +23,7 @@ addons:
       - deadsnakes
     packages:
       - g++-4.8
+      - pandoc
       - libnotify-bin
       - python3.5
       - python3.5-dev
@@ -43,3 +44,5 @@ after_success:
   - "coveralls"
   - "codeclimate-test-reporter"
   - "deactivate"
+before_deploy:
+  - "pandoc -f markdown -t rst -o README.rst README.md"
