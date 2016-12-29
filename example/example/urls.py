@@ -23,9 +23,7 @@ from django.contrib import admin
 from django_otp.admin import OTPAdmin, AdminSite
 
 OTPAdmin.enable()
-admin.site.login_template = AdminSite.login_template
-admin.site.login_form = AdminSite.login_form
-# admin.site = OTPAdminSite()
+admin.site = AdminSite()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

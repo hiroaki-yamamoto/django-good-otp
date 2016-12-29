@@ -32,3 +32,10 @@ class AdminSite(admin.AdminSite):
         path.abspath(path.dirname(__file__)),
         "templates", "1_10", "login.html"
     )
+
+    def __init__(self, *args, **kwargs):
+        """Initialize the instance."""
+        inherit = bool(kwargs.pop("inherit_panels", True))
+        super(AdminSite, self).__init__(*args, **kwargs)
+        if inherit:
+            self._registry = admin.site._registry.copy()
