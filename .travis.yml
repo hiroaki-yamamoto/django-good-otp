@@ -1,4 +1,6 @@
-language: node_js
+language: python
+python:
+  - 3.5
 sudo: false
 cache:
   apt: true
@@ -24,9 +26,6 @@ addons:
       - g++-4.8
       - pandoc
       - libnotify-bin
-      - python3.5
-      - python3.5-dev
-      - python3.5-venv
 install:
   - "npm install"
   - "npm update"
