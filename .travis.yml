@@ -1,0 +1,46 @@
+language: node_js
+sudo: false
+cache:
+  apt: true
+  pip: true
+  directories:
+    - "${HOME}/.npm"
+    - "${HOME}/.nvm"
+    - "node_modules"
+    - "../venv"
+compiler: g++-4.8
+env:
+  global:
+    - CXX=g++-4.8
+    - DEPLOY_REPO=https://hiroaki-yamamoto:${DEPLOY_KEY}@github.com/hysoftware/hysoftware.net-deploy.git
+    - node_mode=production
+node_js:
+  - "node"
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - deadsnakes
+    packages:
+      - rsync
+      - g++-4.8
+      - libnotify-bin
+      - python3.5
+      - python3.5-dev
+      - python3.5-venv
+install:
+  - "npm install"
+  - "npm update"
+  - "pyvenv-3.5 ../venv"
+  - "source ../venv/bin/activate"
+  - "pip install -r requirements.txt"
+  - "deactivate"
+script:
+  - "source ../venv/bin/activate"
+  - "npm test"
+  - "deactivate"
+after_success:
+  - "source ../venv/bin/activate"
+  - "coveralls"
+  - "codeclimate-test-reporter"
+  - "deactivate"
