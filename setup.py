@@ -34,6 +34,7 @@ setup_kwargs = {
 }
 setup_kwargs.update({
     "long_description": long_desc,
+    "url": "https://github.com/hiroaki-yamamoto/django-good-otp",
     "packages": find_packages(exclude=["tests"]),
     "include_package_data": True,
     "install_requires": dependencies,
