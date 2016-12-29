@@ -12,7 +12,6 @@ compiler: g++-4.8
 env:
   global:
     - CXX=g++-4.8
-    - DEPLOY_REPO=https://hiroaki-yamamoto:${DEPLOY_KEY}@github.com/hysoftware/hysoftware.net-deploy.git
     - node_mode=production
 node_js:
   - "node"
