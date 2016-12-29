@@ -15,3 +15,6 @@ class OTPSecrets(models.Model):
         primary_key=True
     )
     secret = models.CharField(max_length=16, db_index=True)
+    issuer_name = models.CharField(
+        max_length=40, db_index=True, null=False, blank=True
+    )

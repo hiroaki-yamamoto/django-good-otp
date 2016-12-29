@@ -1,9 +1,6 @@
-window.assignOTPSecret = (
-  selectQuerySelector, inputQuerySelector, imgQuerySelector, urlPrefix
-) ->
-  select = document.querySelector selectQuerySelector
-  input = document.querySelector inputQuerySelector
-  img = document.querySelector imgQuerySelector
+window.assignOTPSecret = (name, input, img, urlPrefix, issuer_name) ->
   input.value = generateOTPSecret()
-  img.src = "#{urlPrefix}/#{input.value}?" +
-            "name=#{select.options[select.selectedIndex].text}"
+  qs = ["name=" + encodeURIComponent name]
+  if issuer_name
+    qs = qs.concat "issuer_name=#{encodeURIComponent issuer_name}"
+  img.src = "#{urlPrefix}/#{input.value}?#{qs.join "&"}"

@@ -26,7 +26,7 @@ class OTPGenerationForm(forms.ModelForm):
         """Metadata."""
 
         model = OTPSecrets
-        fields = ("user", "secret")
+        fields = ("user", "secret", "issuer_name")
         widgets = {
             "secret": OTPGenWidget(embed_script=True, attrs={
                 "class": "secret"
@@ -36,9 +36,13 @@ class OTPGenerationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """Init the instance."""
         super(OTPGenerationForm, self).__init__(*args, **kwargs)
-        self.fields["secret"].widget.btn_attrs["onclick"] = (
+        fire_gen = (
+            "var select=document.querySelector('#{0}');"
             "assignOTPSecret("
-            "'#{0}', '#{1}_container .secret', '#{1}_container .qrcode', '{2}'"
+            "select.options[select.selectedIndex].text,"
+            "document.querySelector('#{1}_container .secret'),"
+            "document.querySelector('#{1}_container .qrcode'),"
+            "'{2}', document.querySelector('#{3}').value"
             ");"
         ).format(
             self["user"].id_for_label,
@@ -46,15 +50,22 @@ class OTPGenerationForm(forms.ModelForm):
             re.sub(r"/A{16}$", "", reverse(
                 "django_otp:qrcode",
                 kwargs={"secret": "AAAAAAAAAAAAAAAA"}
-            ))
+            )),
+            self["issuer_name"].id_for_label
         )
+        self.fields["issuer_name"].widget.attrs["onblur"] = fire_gen
+        self.fields["secret"].widget.btn_attrs["onclick"] = fire_gen
         self.fields["secret"].widget.img_attrs.setdefault("class", "")
         self.fields["secret"].widget.img_attrs["class"] += " qrcode"
         if self.instance.secret:
             self.fields["secret"].widget.img_attrs["src"] = reverse(
                 "django_otp:qrcode", kwargs={"secret": self.instance.secret}
             ) + ("?{}").format(urlencode({
-                "name": self.instance.user.username
+                key: value
+                for (key, value) in {
+                    "name": self.instance.user.username,
+                    "issuer_name": self.instance.issuer_name
+                }.items() if value
             }))
 
 
@@ -64,7 +75,7 @@ class OTPAdmin(admin.ModelAdmin):
     list_display = ("user", )
     search_fields = (
         "user__email", "user__first_name", "user__last_name",
-        "user__username"
+        "issuer_name", "user__username"
     )
     form = OTPGenerationForm
 

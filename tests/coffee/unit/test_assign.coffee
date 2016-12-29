@@ -1,39 +1,27 @@
 describe "Secret key assignment test", ->
-  documentMock = undefined
-  windowMock = undefined
-
-  querySelectorStub = undefined
-  generateOTPSecret = undefined
-  generateOTPSecretReturnValue = undefined
   input = undefined
   img = undefined
-  select = undefined
+  name = undefined
+  generateOTPSecretReturnValue = undefined
+  windowMock = undefined
+  generateOTPSecret = undefined
 
   beforeEach ->
     generateOTPSecretReturnValue = window.generateOTPSecret()
-    documentMock = sinon.mock(document)
     windowMock = sinon.mock(window)
-    querySelectorStub = documentMock.expects("querySelector").thrice()
     input = {}
     img = {}
-    select =
-      "selectedIndex": 0
-      "options": [
-        ("text": "Test")
-      ]
-    querySelectorStub.onCall(0).returns select
-    querySelectorStub.onCall(1).returns input
-    querySelectorStub.onCall(2).returns img
+    name = "Test Name"
     generateOTPSecret = windowMock.expects("generateOTPSecret").once()
     generateOTPSecret.returns generateOTPSecretReturnValue
 
   afterEach ->
-    documentMock.restore()
     windowMock.restore()
 
-  describe "Calling assignOTPSecret, ", ->
+  describe "Calling assignOTPSecret without issuer_name, ", ->
     beforeEach ->
-      assignOTPSecret "#OTPSelect", "#OTPInput", "#OTPImg", "/qrcode"
+      assignOTPSecret name, input, img, "/qrcode"
+      windowMock.verify()
 
     it "The secret key is generated", ->
       expect(generateOTPSecret.calledOnce).is.true
@@ -45,5 +33,20 @@ describe "Secret key assignment test", ->
     it "The image url should be proper", ->
       expect(img.src).is.equal(
         "/qrcode/#{input.value}?" +
-        "name=#{select.options[select.selectedIndex].text}"
+        "name=#{encodeURIComponent name}"
+      )
+
+  describe "Calling assignOTPSecret with issuer_name, ", ->
+    issuer_name = "hi"
+    qs = undefined
+    beforeEach ->
+      qs = [
+        "name=#{encodeURIComponent name}",
+        "issuer_name=#{encodeURIComponent issuer_name}"
+      ]
+      assignOTPSecret name, input, img, "/qrcode", issuer_name
+
+    it "The image url should be proper", ->
+      expect(img.src).is.equal(
+        "/qrcode/#{input.value}?#{qs.join '&'}"
       )
