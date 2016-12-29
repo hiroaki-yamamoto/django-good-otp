@@ -6,7 +6,7 @@
 import os
 
 SECRET_KEY = "test"
-ROOT_URLCONF = "django_otp.urls"
+ROOT_URLCONF = "urls"
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',

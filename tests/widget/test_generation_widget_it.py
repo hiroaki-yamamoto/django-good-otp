@@ -42,7 +42,11 @@ class OTPGenWidgetTemplateLoadTest(TestCase):
             result,
             self.widget.template.render(
                 widget=self.widget,
-                attrs={"data-hello": "world", "value": "test_value"}
+                attrs={
+                    "data-hello": "world",
+                    "value": "test_value",
+                    "name": "test"
+                }
             )
         )
 
@@ -72,6 +76,6 @@ class OTPGenWidgetTemplateLoadWithoutValueTest(TestCase):
             result,
             self.widget.template.render(
                 widget=self.widget,
-                attrs={"data-hello": "world"}
+                attrs={"data-hello": "world", "name": "test"}
             )
         )

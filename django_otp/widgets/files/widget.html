@@ -1,10 +1,14 @@
-{% if widget.embed_script -%}
-{{ script({"widget": widget}) }}
-{%- endif %}
-{% if widget.enable_img -%}
-{{ img({"widget": widget}) -}}
-{%- endif %}
-<input type="text" readonly{% if widget.attrs %}{%for (key, value) in widget.attrs.items()%} {{ key }}="{{ value }}"{% endfor %}{% endif %}{% if attrs %}{%for (key, value) in attrs.items() %} {{ key }}="{{ value }}"{% endfor %}{% endif %}>
-{% if widget.enable_btn -%}
-{{ btn({"widget": widget}) -}}
-{%- endif %}
+<div id="{{ widget.attrs.id or (attrs.id if attrs else '') }}_container">
+  {% if widget.embed_script -%}
+  <script type="application/javascript">
+  {{ script({"widget": widget}) }}
+  </script>
+  {%- endif %}
+  {% if widget.enable_img -%}
+  {{ img({"widget": widget}) -}}
+  {%- endif %}
+  <input type="text" readonly{% if widget.attrs %}{{ flatatt(widget.attrs) }}{% endif %}{% if attrs %}{{ flatatt(attrs) }}{% endif %}>
+  {% if widget.enable_btn -%}
+  {{ btn({"widget": widget}) -}}
+  {%- endif %}
+</div>

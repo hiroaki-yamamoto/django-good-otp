@@ -30,7 +30,10 @@ class QRCodeViewTestBase(TestCase):
         self.secret = gen_otp_secret()
         query_str = ("?" + urlencode(query_args)) if query_args else ""
         self.request = RequestFactory().get(
-            reverse("qrcode", kwargs={"secret": self.secret}) + query_str
+            reverse(
+                "django_otp:qrcode",
+                kwargs={"secret": self.secret}
+            ) + query_str
         )
         self.view = QRCodeView.as_view()
 

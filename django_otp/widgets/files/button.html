@@ -1,1 +1,1 @@
-<button{% if widget.btn_attrs %}{%for (key, value) in widget.btn_attrs.items()%} {{ key }}="{{ value }}"{% endfor %}{% endif %}>{{ widget.btn_label }}</button>
+<button type="button"{% if widget.btn_attrs %}{{ flatatt(widget.btn_attrs) }}{% endif %}>{{ widget.btn_label }}</button>
