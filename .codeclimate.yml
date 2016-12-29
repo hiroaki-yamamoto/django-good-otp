@@ -1,0 +1,32 @@
+engines:
+  csslint:
+    enabled: false
+  scss-lint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - javascript
+        - python
+  eslint:
+    enabled: true
+    config:
+      config: .eslintrc
+    extensions:
+      - .js
+  fixme:
+    enabled: true
+  radon:
+    enabled: true
+ratings:
+  paths:
+    - "**.coffee"
+    - "**.js"
+    - "**.scss"
+    - "**.py"
+exclude_paths:
+  - tests/
+  - django_otp/*/migrations/
