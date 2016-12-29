@@ -22,7 +22,6 @@ addons:
       - ubuntu-toolchain-r-test
       - deadsnakes
     packages:
-      - rsync
       - g++-4.8
       - libnotify-bin
       - python3.5
