@@ -64,7 +64,9 @@ class QRCodeViewTest(QRCodeViewTestBase):
     def test_qrcode(self):
         """Qrcode generation function should be called as svg image."""
         from qrcode.image.svg import SvgPathImage as svg
-        self.build_otp_uri.assert_called_once_with(self.secret)
+        self.build_otp_uri.assert_called_once_with(
+            self.secret, name="Untitled"
+        )
         self.generate_qrcode.assert_called_once_with(
             self.build_otp_uri.return_value, image_factory=svg
         )
@@ -116,7 +118,7 @@ class QRCodeViewWithIssuerNameTest(QRCodeViewTestBase):
         """Qrcode generation function should be called as svg image."""
         from qrcode.image.svg import SvgPathImage as svg
         self.build_otp_uri.assert_called_once_with(
-            self.secret, issuer_name=self.issuer_name
+            self.secret, issuer_name=self.issuer_name, name="Untitled"
         )
         self.generate_qrcode.assert_called_once_with(
             self.build_otp_uri.return_value, image_factory=svg
