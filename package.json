@@ -1,6 +1,6 @@
 {
   "name": "django_good_otp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yet Another Implementation of One-Time-Password-Authentication for Django",
   "main": "gulpfile.js",
   "scripts": {
