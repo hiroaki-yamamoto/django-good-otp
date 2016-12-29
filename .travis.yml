@@ -15,8 +15,6 @@ env:
   global:
     - CXX=g++-4.8
     - node_mode=production
-node_js:
-  - "node"
 addons:
   apt:
     sources:
@@ -27,21 +25,17 @@ addons:
       - pandoc
       - libnotify-bin
 install:
+  - "nvm install 7"
+  - "nvm use 7"
   - "npm install"
   - "npm update"
-  - "pyvenv-3.5 ../venv"
-  - "source ../venv/bin/activate"
   - "pip install -r requirements.txt"
-  - "deactivate"
 script:
-  - "source ../venv/bin/activate"
+  - "nvm use 7"
   - "npm test"
-  - "deactivate"
 after_success:
-  - "source ../venv/bin/activate"
   - "coveralls"
   - "codeclimate-test-reporter"
-  - "deactivate"
 before_deploy:
   - "pandoc -f markdown -t rst -o README.rst README.md"
 deploy:
