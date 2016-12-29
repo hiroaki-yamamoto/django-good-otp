@@ -1,8 +1,6 @@
 engines:
   csslint:
     enabled: false
-  scss-lint:
-    enabled: true
   coffeelint:
     enabled: true
   duplication:
@@ -25,7 +23,6 @@ ratings:
   paths:
     - "**.coffee"
     - "**.js"
-    - "**.scss"
     - "**.py"
 exclude_paths:
   - tests/
