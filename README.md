@@ -138,7 +138,12 @@ urlpatterns = [
 ]
 ```
 
-### Contribution
+## Other stuff
+For other stuff that is not documented here, please refer the [source code].
+
+[source code]: https://github.com/hiroaki-yamamoto/django-good-otp
+
+## Contribution
 The code is on [Github] and you can create issues/PRs. Making issues is
 appreciated, however, **making PRs is more appreciated**.
 
