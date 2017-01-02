@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+  <ul>
+    <li>Admin URL: {{ url("admin:login") }}</li>
+    <li>Is_safe?: {{ view.is_safe_url(
+      url("admin:login"), view.request.get_host()
+    ) }}</li>
+  </ul>
+</body>
+</html>

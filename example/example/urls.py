@@ -22,10 +22,13 @@ from django.contrib import admin
 
 from django_otp.admin import OTPAdmin, AdminSite
 
+from .views import IndexView
+
 OTPAdmin.enable()
 admin.site = AdminSite()
 
 urlpatterns = [
     url(r'^s/', admin.site.urls, name="admin"),
-    url(r'^qr/', include("django_otp.urls"))
+    url(r'^qr/', include("django_otp.urls")),
+    url(r'^index/', IndexView.as_view())
 ]

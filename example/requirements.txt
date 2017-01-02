@@ -1,0 +1,7 @@
+Django==1.10.4
+django-good-otp==1.0.3
+Jinja2==2.8.1
+MarkupSafe==0.23
+pyotp==2.2.1
+qrcode==5.3
+six==1.10.0
