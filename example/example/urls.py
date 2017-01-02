@@ -26,6 +26,6 @@ OTPAdmin.enable()
 admin.site = AdminSite()
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^s/', admin.site.urls, name="admin"),
     url(r'^qr/', include("django_otp.urls"))
 ]
