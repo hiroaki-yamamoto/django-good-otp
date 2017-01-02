@@ -59,9 +59,9 @@
   <div class="form-row">
     {{ form.password.errors }}
     {{ form.password.label_tag }} {{ form.password }}
-    <input type="hidden" name="next" value="{{ next }}" />
   </div>
 {% endcomment %}
+  <input type="hidden" name="next" value="{{ next }}" />
 
   {% url 'admin_password_reset' as password_reset_url %}
   {% if password_reset_url %}
