@@ -3,7 +3,6 @@
 
 {% block extrastyle %}{{ block.super }}
 <link rel="stylesheet" type="text/css" href="{% static "admin/css/login.css" %}" />
-<link rel="stylesheet" type="text/css" href="{% static "login_style.css" %}" />
 {{ form.media }}
 {% endblock %}
 
@@ -44,14 +43,6 @@
 {% endif %}
 
 <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
-  {% for fld in form %}
-    <div class="form-row">
-      {{ fld.errors }}
-      {{ fld.label_tag }} {{ fld }}
-    </div>
-  {% endfor %}
-
-{% comment %}
   <div class="form-row">
     {{ form.username.errors }}
     {{ form.username.label_tag }} {{ form.username }}
@@ -61,8 +52,6 @@
     {{ form.password.label_tag }} {{ form.password }}
     <input type="hidden" name="next" value="{{ next }}" />
   </div>
-{% endcomment %}
-
   {% url 'admin_password_reset' as password_reset_url %}
   {% if password_reset_url %}
   <div class="password-reset-link">

@@ -24,11 +24,24 @@ from django_otp.admin import OTPAdmin, AdminSite
 
 from .views import IndexView
 
+
+class TestAdminSite(admin.AdminSite):
+    """test admin site."""
+
+    login_form = AdminSite.login_form
+    login_template = AdminSite.login_template
+
+    def __init__(self, *args, **kwargs):
+        """Init."""
+        super(TestAdminSite, self).__init__(*args, **kwargs)
+        self._registry = admin.site._registry.copy()
+
+
 OTPAdmin.enable()
 admin.site = AdminSite()
 
 urlpatterns = [
-    url(r'^s/', admin.site.urls, name="admin"),
+    url(r'^s/', admin.site.urls),
     url(r'^qr/', include("django_otp.urls")),
     url(r'^index/', IndexView.as_view())
 ]

@@ -99,4 +99,4 @@ class AdminSite(admin.AdminSite):
         inherit = bool(kwargs.pop("inherit_panels", True))
         super(AdminSite, self).__init__(*args, **kwargs)
         if inherit:
-            self._registry = admin.site._registry.copy()
+            self._registry.update(admin.site._registry)
