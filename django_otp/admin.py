@@ -36,25 +36,28 @@ class OTPGenerationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         """Init the instance."""
         super(OTPGenerationForm, self).__init__(*args, **kwargs)
-        fire_gen = (
-            "var select=document.querySelector('#{0}');"
-            "assignOTPSecret("
-            "select.options[select.selectedIndex].text,"
-            "document.querySelector('#{1}_container .secret'),"
-            "document.querySelector('#{1}_container .qrcode'),"
-            "'{2}', document.querySelector('#{3}').value"
-            ");"
-        ).format(
-            self["user"].id_for_label,
-            self["secret"].id_for_label,
-            re.sub(r"/A{16}$", "", reverse(
-                "django_otp:qrcode",
-                kwargs={"secret": "AAAAAAAAAAAAAAAA"}
-            )),
-            self["issuer_name"].id_for_label
-        )
-        self.fields["issuer_name"].widget.attrs["onblur"] = fire_gen
-        self.fields["secret"].widget.btn_attrs["onclick"] = fire_gen
+
+        def fire_gen(gen_new=True):
+            return (
+                "var select=document.querySelector('#{0}');"
+                "assignOTPSecret("
+                "select.options[select.selectedIndex].text,"
+                "document.querySelector('#{1}_container .secret'),"
+                "document.querySelector('#{1}_container .qrcode'),"
+                "'{2}', document.querySelector('#{3}').value,{4}"
+                ");"
+            ).format(
+                self["user"].id_for_label,
+                self["secret"].id_for_label,
+                re.sub(r"/A{16}$", "", reverse(
+                    "django_otp:qrcode",
+                    kwargs={"secret": "AAAAAAAAAAAAAAAA"}
+                )),
+                self["issuer_name"].id_for_label,
+                str(gen_new).lower()
+            )
+        self.fields["issuer_name"].widget.attrs["onblur"] = fire_gen(False)
+        self.fields["secret"].widget.btn_attrs["onclick"] = fire_gen()
         self.fields["secret"].widget.img_attrs.setdefault("class", "")
         self.fields["secret"].widget.img_attrs["class"] += " qrcode"
         if self.instance.secret:

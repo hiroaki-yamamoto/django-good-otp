@@ -4,7 +4,6 @@ describe "Secret key assignment test", ->
   name = undefined
   generateOTPSecretReturnValue = undefined
   windowMock = undefined
-  generateOTPSecret = undefined
 
   beforeEach ->
     generateOTPSecretReturnValue = window.generateOTPSecret()
@@ -12,14 +11,15 @@ describe "Secret key assignment test", ->
     input = {}
     img = {}
     name = "Test Name"
-    generateOTPSecret = windowMock.expects("generateOTPSecret").once()
-    generateOTPSecret.returns generateOTPSecretReturnValue
 
   afterEach ->
     windowMock.restore()
 
   describe "Calling assignOTPSecret without issuer_name, ", ->
+    generateOTPSecret = undefined
     beforeEach ->
+      generateOTPSecret = windowMock.expects("generateOTPSecret").once()
+      generateOTPSecret.returns generateOTPSecretReturnValue
       assignOTPSecret name, input, img, "/qrcode"
       windowMock.verify()
 
@@ -37,16 +37,41 @@ describe "Secret key assignment test", ->
       )
 
   describe "Calling assignOTPSecret with issuer_name, ", ->
+    generateOTPSecret = undefined
     issuer_name = "hi"
     qs = undefined
     beforeEach ->
+      generateOTPSecret = windowMock.expects("generateOTPSecret").once()
+      generateOTPSecret.returns generateOTPSecretReturnValue
       qs = [
         "name=#{encodeURIComponent name}",
         "issuer_name=#{encodeURIComponent issuer_name}"
       ]
       assignOTPSecret name, input, img, "/qrcode", issuer_name
+      windowMock.verify()
 
     it "The image url should be proper", ->
       expect(img.src).is.equal(
         "/qrcode/#{input.value}?#{qs.join '&'}"
       )
+
+  describe "Calling assignOTPSecret once with gen_new is false", ->
+    issuer_name = "hi"
+    generateOTPSecret = undefined
+    beforeEach ->
+      generateOTPSecret = windowMock.expects("generateOTPSecret").once()
+      assignOTPSecret name, input, img, "/qrcode", issuer_name, false
+
+    it "generateOTPSecret should be called once", ->
+      generateOTPSecret.verify()
+
+  describe "Calling assignOTPSecret once with gen_new is false", ->
+    issuer_name = "hi"
+    generateOTPSecret = undefined
+    beforeEach ->
+      assignOTPSecret name, input, img, "/qrcode", issuer_name, false
+      generateOTPSecret = windowMock.expects("generateOTPSecret").never()
+      assignOTPSecret name, input, img, "/qrcode", issuer_name, false
+
+    it "generateOTPSecret shouldn't be called", ->
+      generateOTPSecret.verify()
