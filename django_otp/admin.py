@@ -96,7 +96,7 @@ class AdminSite(admin.AdminSite):
     login_template = path.join(
         path.abspath(path.dirname(__file__)),
         "templates",
-        ("_").join(django.get_version().split(".")[:-1]),
+        ("_").join(django.get_version().split(".")[0:2]),
         "login.html"
     )
 
