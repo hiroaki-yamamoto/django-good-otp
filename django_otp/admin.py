@@ -3,6 +3,7 @@
 
 """OTP Admin Panel."""
 
+import django
 import re
 
 try:
@@ -94,7 +95,9 @@ class AdminSite(admin.AdminSite):
     login_form = AuthenticationForm
     login_template = path.join(
         path.abspath(path.dirname(__file__)),
-        "templates", "1_10", "login.html"
+        "templates",
+        ("_").join(django.get_version().split(".")[:-1]),
+        "login.html"
     )
 
     def __init__(self, *args, **kwargs):

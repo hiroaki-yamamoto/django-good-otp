@@ -61,8 +61,10 @@ class AuthenticationValidationSuccessTest(
         form = self.form_cls(
             None, {"username": "test_1", "password": "pw_1"}
         )
-        self.assertTrue(form.is_valid())
-        self.assertDictEqual(
+        self.assertTrue(
+            form.is_valid(), "Form is invalid: {}".format(dict(form.errors))
+        )
+        self.assertEqual(
             {"username": "test_1", "password": "pw_1", "otp_auth": ""},
             form.clean()
         )
@@ -77,7 +79,9 @@ class AuthenticationValidationSuccessTest(
             "otp_auth": otp.now()
         }
         form = self.form_cls(None, query)
-        self.assertTrue(form.is_valid())
+        self.assertTrue(
+            form.is_valid(), "Form is invalid: {}".format(dict(form.errors))
+        )
         self.assertDictEqual(query, form.clean())
 
 

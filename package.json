@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/hiroaki-yamamoto/django-good-otp#readme",
   "devDependencies": {
-    "eslint": "^3.12.2",
+    "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.1",
     "gulp": "^3.9.1",
-    "hyamamoto-job-toolbox": "^0.2.6",
+    "hyamamoto-job-toolbox": "^0.2.31",
     "karma-coverage": "^1.1.1"
   }
 }

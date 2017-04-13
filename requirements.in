@@ -1,0 +1,13 @@
+codeclimate-test-reporter
+coverage
+coveralls
+Django
+docopt
+flake8
+flake8-docstrings
+Jinja2
+pyotp
+qrcode
+tox
+detox
+pip-tools
