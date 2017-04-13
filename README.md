@@ -1,6 +1,7 @@
 # Yet Another Implementation of OTP for Django
 
 [![CI]][CI Link] [![CovSt]][CovStLink] [![GPA]][GPALink]
+
 [CI]: https://travis-ci.org/hiroaki-yamamoto/django-good-otp.svg?branch=master
 [CI Link]: https://travis-ci.org/hiroaki-yamamoto/django-good-otp
 [CovSt]: https://coveralls.io/repos/github/hiroaki-yamamoto/django-good-otp/badge.svg?branch=master
