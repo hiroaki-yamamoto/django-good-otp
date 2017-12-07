@@ -2,17 +2,9 @@
 # coding=utf-8
 """Setup script."""
 
-import json
 from os.path import dirname, join
 import sys
 from setuptools import setup, find_packages
-
-package_dct = {}
-with open(join(dirname(__file__), "package.json")) as package:
-    package_dct = json.load(package)
-
-dependencies = ("pyotp", "qrcode", "django>=1.10", "jinja2")
-keywords = (" ").join(package_dct["keywords"])
 
 author = "Hiroaki Yamamoto"
 author_email = "hiroaki@hysoftware.net"
@@ -26,25 +18,24 @@ try:
 except Exception:
     long_desc = None
 
-setup_kwargs = {
-    key: value for (key, value) in package_dct.items()
-    if key in {
-        "name", "description", "url", "license", "version"
-    }
-}
-setup_kwargs.update({
-    "long_description": long_desc,
-    "url": "https://github.com/hiroaki-yamamoto/django-good-otp",
-    "packages": find_packages(exclude=["tests"]),
-    "include_package_data": True,
-    "install_requires": dependencies,
-    "zip_safe": False,
-    "keywords": keywords,
-    "classifiers": [
+setup(
+    name="django_good_otp",
+    description=(
+        "Yet Another Implementation of "
+        "One-Time-Password-Authentication for Django"
+    ),
+    license="MIT",
+    version="[VERSION]",
+    long_description=long_desc,
+    url="https://github.com/hiroaki-yamamoto/django-good-otp",
+    packages=find_packages(exclude=["tests"]),
+    include_package_data=True,
+    install_requires=["pyotp", "qrcode", "django>=1.10", "jinja2"],
+    zip_safe=False,
+    keywords=["python", "OTP", "Django"],
+    classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.5"
     ]
-})
-
-setup(**setup_kwargs)
+)

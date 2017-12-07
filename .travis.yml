@@ -5,39 +5,19 @@ sudo: false
 cache:
   apt: true
   pip: true
-  directories:
-    - "${HOME}/.npm"
-    - "${HOME}/.nvm"
-    - "node_modules"
-    - "../venv"
-compiler: g++-4.8
-env:
-  global:
-    - CXX=g++-4.8
-    - node_mode=production
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - deadsnakes
     packages:
-      - g++-4.8
       - pandoc
-      - libnotify-bin
-install:
-  - "nvm install 7"
-  - "nvm use 7"
-  - "npm install"
-  - "npm update"
-  - "pip install -r requirements.txt"
 script:
-  - "nvm use 7"
-  - "npm test"
+  - "detox"
 after_success:
   - "coveralls"
   - "codeclimate-test-reporter"
 before_deploy:
   - "pandoc -f markdown -t rst -o README.rst README.md"
+  - "echo ${TRAVIS_TAG}"
+  - "sed -i -pe \"s/\[VERSION\]/${TRAVIS_TAG}/\" setup.py"
 deploy:
   provider: pypi
   skip_cleanup: true
