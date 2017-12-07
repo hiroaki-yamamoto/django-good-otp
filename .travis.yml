@@ -17,7 +17,7 @@ after_success:
 before_deploy:
   - "pandoc -f markdown -t rst -o README.rst README.md"
   - "echo ${TRAVIS_TAG}"
-  - "sed -i -pe \"s/\\[VERSION\\]/${TRAVIS_TAG}/\" setup.py"
+  - "sed -i -e \"s/\\[VERSION\\]/${TRAVIS_TAG}/\" setup.py"
 deploy:
   provider: pypi
   skip_cleanup: true
