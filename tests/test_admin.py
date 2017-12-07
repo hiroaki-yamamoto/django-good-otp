@@ -13,14 +13,20 @@ try:
 except ImportError:
     from mock import patch  # nonqa
 
+import django
+
 from django.contrib import admin
-from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 from django_otp.models import OTPSecrets
 from django_otp.admin import OTPAdmin, AdminSite, OTPGenerationForm
 
 from .bases import DBIntegrationTestBase
+
+if django.VERSION < (2, 0):
+    from django.core.urlresolvers import reverse
+else:
+    from django.urls import reverse
 
 
 class AdminPanelRegistrationTest(TestCase):

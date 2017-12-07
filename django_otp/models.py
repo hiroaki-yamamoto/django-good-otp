@@ -12,7 +12,7 @@ class OTPSecrets(models.Model):
 
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL, related_name="otp_secret",
-        primary_key=True
+        on_delete=models.CASCADE, primary_key=True
     )
     secret = models.CharField(max_length=16, db_index=True)
     issuer_name = models.CharField(

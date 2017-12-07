@@ -19,7 +19,7 @@ class OTPAuthenticationBackend(ModelBackend):
     """OTPAuthenticationBackend."""
 
     def authenticate(self, request=None, **kwargs):
-        """Authentication form."""
+        """Check form validity."""
         django_version = tuple(
             [int(s) for s in django.get_version().split(".")]
         )

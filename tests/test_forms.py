@@ -26,7 +26,7 @@ class AuthFormNormalInitTest(AuthFormTestBase, TestCase):
     """Normal authentication init test."""
 
     def form_type_test(self):
-        """The form should inherit django's AuthenticationForm."""
+        """Inherit django's AuthenticationForm."""
         self.assertTrue(
             issubclass(self.form_cls, DjangoAuthForm),
             "The authentication form doesn't inherit Django's auth form."

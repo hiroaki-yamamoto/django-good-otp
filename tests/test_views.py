@@ -13,13 +13,18 @@ try:
 except ImportError:
     from mock import ANY, patch  # noqa
 
+import django
 from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.test import TestCase, RequestFactory
 
 from django_otp.views import QRCodeView
 
 from .utils import gen_otp_secret
+
+if django.VERSION < (2, 0):
+    from django.core.urlresolvers import reverse
+else:
+    from django.urls import reverse
 
 
 class QRCodeViewTestBase(TestCase):

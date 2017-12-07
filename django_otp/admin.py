@@ -11,13 +11,17 @@ try:
 except ImportError:
     from urllib import urlencode  # noqa
 
-from django.core.urlresolvers import reverse
 from django.contrib import admin
 from django import forms
 from os import path
 from .models import OTPSecrets
 from .forms import AuthenticationForm
 from .widgets import OTPGenWidget
+
+if django.VERSION < (2, 0):
+    from django.core.urlresolvers import reverse
+else:
+    from django.urls import reverse
 
 
 class OTPGenerationForm(forms.ModelForm):
