@@ -4,5 +4,5 @@ Jinja2==2.10
 MarkupSafe==1.0
 pyotp==2.2.6
 pytz==2018.5
-qrcode==5.3
+qrcode==6.0
 six==1.11.0
