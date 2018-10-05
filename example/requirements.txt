@@ -1,4 +1,4 @@
-Django==1.11
+Django==1.11.16
 django-good-otp==1.0.6
 Jinja2==2.9.6
 MarkupSafe==1.0
