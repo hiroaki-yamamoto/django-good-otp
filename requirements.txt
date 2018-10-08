@@ -37,6 +37,6 @@ requests==2.19.1          # via codeclimate-test-reporter, coveralls
 six==1.11.0               # via eventlet, pip-tools, pydocstyle, qrcode, tox
 snowballstemmer==1.2.1    # via pydocstyle
 toml==0.10.0              # via tox
-tox==3.4.0
+tox==3.5.1
 urllib3==1.23             # via requests
 virtualenv==16.0.0        # via tox
