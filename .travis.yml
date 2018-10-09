@@ -13,7 +13,7 @@ addons:
 
 jobs:
   include:
-    - stage: "Tests"
+    - stage: "Test"
       python: 2.7
       env:
         - TOX_ENV=2-dj110
