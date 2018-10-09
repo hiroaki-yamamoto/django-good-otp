@@ -10,28 +10,23 @@ addons:
   apt:
     packages:
       - pandoc
-
-matrix:
-  include:
-    - name: "Python 3 with Django 2.0"
-      python: 3.6
-      env: TOX_ENV=3-dj20
-    - name: "Python 3 with Django 2.1"
-      python: 3.6
-      env: TOX_ENV=3-dj21
-    - name: "Python 2 with Django 1.10"
-      python: 2.7
-      env: TOX_ENV=2-dj110
-    - name: "Python 2 with Django 1.11"
-      python: 2.7
-      env: TOX_ENV=2-dj111
-
 jobs:
   include:
     - stage: "Test"
-      python:
-        - 3.6
-        - 2.7
+      matrix:
+        include:
+          - name: "Python 3 with Django 2.0"
+            python: 3.6
+            env: TOX_ENV=3-dj20
+          - name: "Python 3 with Django 2.1"
+            python: 3.6
+            env: TOX_ENV=3-dj21
+          - name: "Python 2 with Django 1.10"
+            python: 2.7
+            env: TOX_ENV=2-dj110
+          - name: "Python 2 with Django 1.11"
+            python: 2.7
+            env: TOX_ENV=2-dj111
       script: tox -e ${TOX_ENV}
     - stage: "Coverage"
       name: "Combine Coverage"
