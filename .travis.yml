@@ -20,6 +20,7 @@ after_success:
   - "coverage combine"
   - "coverage xml"
   - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t coverage.py"
+  - "coveralls"
 before_deploy:
   - "pandoc -f markdown -t rst -o README.rst README.md"
   - "echo ${TRAVIS_TAG}"
