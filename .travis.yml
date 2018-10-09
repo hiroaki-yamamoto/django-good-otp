@@ -31,9 +31,9 @@ jobs:
   include:
     - stage: "Coverage"
       name: "Combine Coverage"
-      script: coverage combine
-    - name: "Report"
-      script: "coverage report"
+      script:
+        - coverage combine
+        - coverage report
 
 # script:
 #   - "detox"
