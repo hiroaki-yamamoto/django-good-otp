@@ -1,6 +1,7 @@
 language: python
 python:
   - 3.6
+  - 2.7
 sudo: false
 cache:
   apt: true
@@ -9,43 +10,63 @@ addons:
   apt:
     packages:
       - pandoc
-script:
-  - "detox"
-after_success:
-  - "coverage combine py{27,36}-dj{110,111}.coverage py36-dj20.coverage"
-  - "coveralls"
-  - "codeclimate-test-reporter"
-before_deploy:
-  - "pandoc -f markdown -t rst -o README.rst README.md"
-  - "echo ${TRAVIS_TAG}"
-  - "sed -i -e \"s/\\[VERSION\\]/${TRAVIS_TAG}/\" setup.py"
-deploy:
-  provider: pypi
-  skip_cleanup: true
-  distributions: sdist
-  on:
-    tags: true
-  user:
-    secure: >-
-      OSquy22jQQ3nJiO4N8elR6eVwgX4b7rzLJIzr+15A8jQVCsNlamm0VLF4ymVT5/3Wy8Cm3VX
-      lsYgQn0Sc96Yk3i+PFRkxb9H3s7gtGYitqaOW9k4+QcztbJKhYxKGO5NPRIeUAGPMCQG9BUa
-      y1lZic4wbg+g0Iry7lUSf+07WRbawwuulAByuzqFp8gB9cJNg5cfQuAF4Y2XmckmwnjP6NNs
-      uz5pb0rwySfRFcYQTpl4Pp4IW7NWKJEhid8pTz4GnHU2sctJhZwIPjP0ldYRvSedtwNy+yql
-      5qDgZdZr4aPzHwhy5OobIq8fMxJpHT7q7M9IzOPfcfqknfsTjHCEuuQEYeogCOwVDlcl6qea
-      runMGH+D+e4BaNxgJG/8r1qFR0AvZbrWGKm6GwK/cgkDKyq2LdMMzdyB319tPp3wDoGkV+E9
-      ZZY/xsu2nPG3QbrUHZV6kVFrJ+ZLLXcW5TPhWD/D/4/TP21eSwBJ31q0hNPLs5F/WJyUjgsv
-      q7ZxAqIaHRiW25gHjWnvoz7VJgOAWucCLX66t2wMISfOheHUbmjC9YEbD7HvtbR/ovPv31ER
-      BFTAHn1knIjWFgxSAAsatQV95xj7MRfZGAQl8hOmdgJoIkeYzc2+o5bsyCTmGSnYcdHhkRQO
-      T5aJ+Fgn7hwydCGddHhpclFhJ080yOOc5Is=
-  password:
-    secure: >-
-      t3bGQ0oOPj6zjMMUibn16Nf44ZbYOGObVISY/UCzvYYbb0LeMHTwyu4ohx9mwC4oJX+t4Qoz
-      nAiQkWq+yK2qvq6LnvsvkOvHaHBENxgh0sU/djObo2KEXi5QlnUmDzNsVUTIbSILkEwY/56f
-      bSOgWTk6w5qkdylAEuUls497md8lVp4QUgDnxm09GPkUXaSg0WmIPDVImp4eEKBbB729Q/kL
-      PhOJYKPvQ6xqbE5jVL0az1BeYbh+SNRZTsR4lTFoZkReqzGhtWL6EE1YWhb3h6b021kPVN3q
-      9WWJ2PCoVyU2JzCvkXSTNaUSHqTzzfpqMuOihMK/m8XMaPFTEd9P+O5REstR9wgC+O3dPeon
-      OHfqQQd4LoWHRkZuRdj3EZuHpqGEPZyGgIqRO6WisJ8k5JzkzFy5L2oj4vrABu0cZD402tGA
-      nn9eaxrYoDZPZccDVuMYhPWAZfPK5KmkmQVAvn9pf3Krz0GZQaVjuanaeO2zdFRBp81N30rZ
-      EdisRNQ+EjprCUpd7Zf3Gk8AZf5Rn6xxqpEA7h7wEnPARHbhEn2U7MzGAx25fFYO0FEBPWOU
-      jXhKhwYk27bp/a7mlNXSPOXpsES4FGTkoXneulm8JfgY9GAQhM/z9BRURUvT+WBz4HbOApur
-      HpA0UIMCFrVSnKOJfEY+/QAar79FvrrLa0c=
+
+jobs:
+  include:
+    - stage: "Tests"
+      python: 2.7
+      env:
+        - TOX_ENV=2-dj110
+        - TOX_ENV=2-dj111
+      script: tox -e ${TOX_ENV}
+    - python: 3.6
+      env:
+        - TOX_ENV=3-dj20
+        - TOX_ENV=3-dj21
+      script: tox -e ${TOX_ENV}
+    - stage: "Coverage"
+      name: "Combine Coverage"
+      script: coverage combine
+    - name: "Report"
+      script: "coverage report"
+
+# script:
+#   - "detox"
+# after_success:
+#   - "coverage combine py{27,36}-dj{110,111}.coverage py36-dj20.coverage"
+#   - "coveralls"
+#   - "codeclimate-test-reporter"
+# before_deploy:
+#   - "pandoc -f markdown -t rst -o README.rst README.md"
+#   - "echo ${TRAVIS_TAG}"
+#   - "sed -i -e \"s/\\[VERSION\\]/${TRAVIS_TAG}/\" setup.py"
+# deploy:
+#   provider: pypi
+#   skip_cleanup: true
+#   distributions: sdist
+#   on:
+#     tags: true
+#   user:
+#     secure: >-
+#       OSquy22jQQ3nJiO4N8elR6eVwgX4b7rzLJIzr+15A8jQVCsNlamm0VLF4ymVT5/3Wy8Cm3VX
+#       lsYgQn0Sc96Yk3i+PFRkxb9H3s7gtGYitqaOW9k4+QcztbJKhYxKGO5NPRIeUAGPMCQG9BUa
+#       y1lZic4wbg+g0Iry7lUSf+07WRbawwuulAByuzqFp8gB9cJNg5cfQuAF4Y2XmckmwnjP6NNs
+#       uz5pb0rwySfRFcYQTpl4Pp4IW7NWKJEhid8pTz4GnHU2sctJhZwIPjP0ldYRvSedtwNy+yql
+#       5qDgZdZr4aPzHwhy5OobIq8fMxJpHT7q7M9IzOPfcfqknfsTjHCEuuQEYeogCOwVDlcl6qea
+#       runMGH+D+e4BaNxgJG/8r1qFR0AvZbrWGKm6GwK/cgkDKyq2LdMMzdyB319tPp3wDoGkV+E9
+#       ZZY/xsu2nPG3QbrUHZV6kVFrJ+ZLLXcW5TPhWD/D/4/TP21eSwBJ31q0hNPLs5F/WJyUjgsv
+#       q7ZxAqIaHRiW25gHjWnvoz7VJgOAWucCLX66t2wMISfOheHUbmjC9YEbD7HvtbR/ovPv31ER
+#       BFTAHn1knIjWFgxSAAsatQV95xj7MRfZGAQl8hOmdgJoIkeYzc2+o5bsyCTmGSnYcdHhkRQO
+#       T5aJ+Fgn7hwydCGddHhpclFhJ080yOOc5Is=
+#   password:
+#     secure: >-
+#       t3bGQ0oOPj6zjMMUibn16Nf44ZbYOGObVISY/UCzvYYbb0LeMHTwyu4ohx9mwC4oJX+t4Qoz
+#       nAiQkWq+yK2qvq6LnvsvkOvHaHBENxgh0sU/djObo2KEXi5QlnUmDzNsVUTIbSILkEwY/56f
+#       bSOgWTk6w5qkdylAEuUls497md8lVp4QUgDnxm09GPkUXaSg0WmIPDVImp4eEKBbB729Q/kL
+#       PhOJYKPvQ6xqbE5jVL0az1BeYbh+SNRZTsR4lTFoZkReqzGhtWL6EE1YWhb3h6b021kPVN3q
+#       9WWJ2PCoVyU2JzCvkXSTNaUSHqTzzfpqMuOihMK/m8XMaPFTEd9P+O5REstR9wgC+O3dPeon
+#       OHfqQQd4LoWHRkZuRdj3EZuHpqGEPZyGgIqRO6WisJ8k5JzkzFy5L2oj4vrABu0cZD402tGA
+#       nn9eaxrYoDZPZccDVuMYhPWAZfPK5KmkmQVAvn9pf3Krz0GZQaVjuanaeO2zdFRBp81N30rZ
+#       EdisRNQ+EjprCUpd7Zf3Gk8AZf5Rn6xxqpEA7h7wEnPARHbhEn2U7MzGAx25fFYO0FEBPWOU
+#       jXhKhwYk27bp/a7mlNXSPOXpsES4FGTkoXneulm8JfgY9GAQhM/z9BRURUvT+WBz4HbOApur
+#       HpA0UIMCFrVSnKOJfEY+/QAar79FvrrLa0c=
