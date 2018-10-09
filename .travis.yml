@@ -10,6 +10,11 @@ addons:
   apt:
     packages:
       - pandoc
+env:
+  - TOX_ENV=2-dj110
+  - TOX_ENV=2-dj111
+  - TOX_ENV=3-dj20
+  - TOX_ENV=3-dj21
 
 jobs:
   include:
