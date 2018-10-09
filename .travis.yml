@@ -18,7 +18,7 @@ script:
   # - "detox"
 after_success:
   - "coverage combine"
-  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t coverage.py"
 before_deploy:
   - "pandoc -f markdown -t rst -o README.rst README.md"
   - "echo ${TRAVIS_TAG}"
