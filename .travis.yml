@@ -10,21 +10,11 @@ addons:
   apt:
     packages:
       - pandoc
-env:
-  - TOX_ENV=3-dj20
-  - TOX_ENV=3-dj21
-  - TOX_ENV=2-dj110
-  - TOX_ENV=2-dj111
-matrix:
-  exclude:
-    - python: 3.6
-      env: TOX_ENV=2-dj110
-    - python: 3.6
-      env: TOX_ENV=2-dj111
-    - python: 2.7
-      env: TOX_ENV=3-dj20
-    - python: 2.7
-      env: TOX_ENV=3-dj21
+# env:
+#   - TOX_ENV=3-dj20
+#   - TOX_ENV=3-dj21
+#   - TOX_ENV=2-dj110
+#   - TOX_ENV=2-dj111
 
 jobs:
   include:
@@ -36,6 +26,16 @@ jobs:
       env: TOX_ENV=2-dj110
       env: TOX_ENV=2-dj111
       script: tox -e ${TOX_ENV}
+      matrix:
+        exclude:
+          - python: 3.6
+            env: TOX_ENV=2-dj110
+          - python: 3.6
+            env: TOX_ENV=2-dj111
+          - python: 2.7
+            env: TOX_ENV=3-dj20
+          - python: 2.7
+            env: TOX_ENV=3-dj21
     - stage: "Coverage"
       name: "Combine Coverage"
       script:
