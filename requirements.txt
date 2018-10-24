@@ -31,7 +31,7 @@ pydocstyle==2.1.1         # via flake8-docstrings
 pyflakes==1.6.0           # via flake8
 pyotp==2.2.6
 qrcode==6.0
-requests==2.19.1          # via coveralls
+requests==2.20.0          # via coveralls
 six==1.11.0               # via eventlet, pip-tools, pydocstyle, qrcode, tox
 snowballstemmer==1.2.1    # via pydocstyle
 toml==0.10.0              # via tox
