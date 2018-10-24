@@ -28,7 +28,7 @@ pluggy==0.8.0             # via tox
 py==1.6.0                 # via detox, tox
 pycodestyle==2.4.0        # via flake8
 pydocstyle==2.1.1         # via flake8-docstrings
-pyflakes==1.6.0           # via flake8
+pyflakes==2.0.0           # via flake8
 pyotp==2.2.6
 qrcode==6.0
 requests==2.20.0          # via coveralls
