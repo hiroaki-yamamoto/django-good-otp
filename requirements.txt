@@ -9,7 +9,7 @@ chardet==3.0.4            # via requests
 click==7.0                # via pip-tools
 coverage==4.5.1
 coveralls==1.5.1
-detox==0.15
+detox==0.18
 dnspython==1.15.0         # via eventlet
 docopt==0.6.2             # via coveralls
 eventlet==0.24.1          # via detox
