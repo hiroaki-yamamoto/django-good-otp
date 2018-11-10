@@ -20,7 +20,7 @@ flake8==3.6.0
 greenlet==0.4.15          # via eventlet
 idna==2.7                 # via requests
 jinja2==2.10
-markupsafe==1.0           # via jinja2
+markupsafe==1.1.0           # via jinja2
 mccabe==0.6.1             # via flake8
 monotonic==1.5            # via eventlet
 pip-tools==3.1.0
@@ -29,9 +29,9 @@ py==1.7.0                 # via detox, tox
 pycodestyle==2.4.0        # via flake8
 pydocstyle==3.0.0         # via flake8-docstrings
 pyflakes==2.0.0           # via flake8
-pyotp==2.2.6
+pyotp==2.2.7
 qrcode==6.0
-requests==2.20.0          # via coveralls
+requests==2.20.1          # via coveralls
 six==1.11.0               # via eventlet, pip-tools, pydocstyle, qrcode, tox
 snowballstemmer==1.2.1    # via pydocstyle
 toml==0.10.0              # via tox
