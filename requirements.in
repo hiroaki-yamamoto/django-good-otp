@@ -6,5 +6,4 @@ Jinja2
 pyotp
 qrcode
 tox
-detox
 pip-tools
