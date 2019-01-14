@@ -2,8 +2,8 @@
 
 [![CI]][CI Link] [![CovSt]][CovStLink] [![GPA]][GPALink]
 
-[CI]: https://travis-ci.org/hiroaki-yamamoto/django-good-otp.svg?branch=master
-[CI Link]: https://travis-ci.org/hiroaki-yamamoto/django-good-otp
+[CI]: https://circleci.com/gh/hiroaki-yamamoto/django-good-otp.svg?style=svg
+[CI Link]: https://circleci.com/gh/hiroaki-yamamoto/django-good-otp
 [CovSt]: https://coveralls.io/repos/github/hiroaki-yamamoto/django-good-otp/badge.svg?branch=master
 [CovStLink]: https://coveralls.io/github/hiroaki-yamamoto/django-good-otp?branch=master
 [GPA]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/badges/gpa.svg
