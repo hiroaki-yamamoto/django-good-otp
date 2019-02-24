@@ -16,7 +16,7 @@ flake8-polyfill==1.0.2    # via flake8-docstrings
 flake8==3.7.6
 idna==2.8                 # via requests
 jinja2==2.10
-markupsafe==1.1.0         # via jinja2
+markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
 pip-tools==3.4.0
 pluggy==0.8.1             # via tox
