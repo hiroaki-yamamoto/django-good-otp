@@ -6,7 +6,7 @@
 #
 django-good-otp==1.1.4
 django==2.2
-jinja2==2.10              # via django-good-otp
+jinja2==2.10.1              # via django-good-otp
 markupsafe==1.1.1           # via jinja2
 pyotp==2.2.7              # via django-good-otp
 pytz==2018.9              # via django
