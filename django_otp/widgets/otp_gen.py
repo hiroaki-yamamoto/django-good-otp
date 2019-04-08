@@ -48,7 +48,7 @@ class OTPGenWidget(TextInput):
         self.template = self.__env.get_template("widget.html")
         super(OTPGenWidget, self).__init__(*args, **kwargs)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         """Render the widegt."""
         additional_attrs = copy(attrs)
         additional_attrs["name"] = name
