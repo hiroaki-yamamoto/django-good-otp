@@ -18,7 +18,7 @@ idna==2.8                 # via requests
 jinja2==2.10.1
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-pip-tools==3.8.0
+pip-tools==3.9.0
 pluggy==0.12.0             # via tox
 py==1.8.0                 # via tox
 pycodestyle==2.5.0        # via flake8
