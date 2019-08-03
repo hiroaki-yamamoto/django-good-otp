@@ -5,10 +5,10 @@
 #    pip-compile --output-file requirements.txt requirements.in
 #
 django-good-otp==1.1.4
-django==2.2.3
+django==2.2.4
 jinja2==2.10.1              # via django-good-otp
 markupsafe==1.1.1           # via jinja2
 pyotp==2.3.0              # via django-good-otp
-pytz==2019.1              # via django
+pytz==2019.2              # via django
 qrcode==6.1               # via django-good-otp
 six==1.12.0               # via qrcode
