@@ -30,6 +30,6 @@ requests==2.22.0          # via coveralls
 six==1.13.0               # via pip-tools, pydocstyle, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.0              # via tox
-tox==3.14.0
-urllib3==1.25.6           # via requests
+tox==3.14.1
+urllib3==1.25.7           # via requests
 virtualenv==16.7.7        # via tox
