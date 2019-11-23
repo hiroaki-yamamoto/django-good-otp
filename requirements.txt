@@ -19,7 +19,7 @@ jinja2==2.10.3
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
 pip-tools==4.2.0
-pluggy==0.13.0             # via tox
+pluggy==0.13.1             # via tox
 py==1.8.0                 # via tox
 pycodestyle==2.5.0        # via flake8
 pydocstyle==4.0.1         # via flake8-docstrings
@@ -32,4 +32,4 @@ snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.0              # via tox
 tox==3.14.1
 urllib3==1.25.7           # via requests
-virtualenv==16.7.7        # via tox
+virtualenv==16.7.8        # via tox
