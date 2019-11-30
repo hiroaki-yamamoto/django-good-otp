@@ -4,7 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-certifi==2019.9.11       # via requests
+certifi==2019.11.28       # via requests
 chardet==3.0.4            # via requests
 click==7.0                # via pip-tools
 coverage==4.5.4
@@ -18,7 +18,7 @@ idna==2.8                 # via requests
 jinja2==2.10.3
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-pip-tools==4.2.0
+pip-tools==4.3.0
 pluggy==0.13.1             # via tox
 py==1.8.0                 # via tox
 pycodestyle==2.5.0        # via flake8
