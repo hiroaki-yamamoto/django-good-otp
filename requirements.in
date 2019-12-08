@@ -1,5 +1,4 @@
 coverage
-coveralls
 flake8
 flake8-docstrings
 Jinja2
