@@ -3,25 +3,18 @@
 
 """OTP Admin Panel."""
 
-import django
+from os import path
 import re
 
-try:
-    from urllib.parse import urlencode
-except ImportError:
-    from urllib import urlencode  # noqa
 
-from django.contrib import admin
+from urllib.parse import urlencode
+
 from django import forms
-from os import path
+from django.contrib import admin
+from django.urls import reverse
 from .models import OTPSecrets
 from .forms import AuthenticationForm
 from .widgets import OTPGenWidget
-
-if django.VERSION < (2, 0):
-    from django.core.urlresolvers import reverse
-else:
-    from django.urls import reverse
 
 
 class OTPGenerationForm(forms.ModelForm):
@@ -99,9 +92,7 @@ class AdminSite(admin.AdminSite):
     login_form = AuthenticationForm
     login_template = path.join(
         path.abspath(path.dirname(__file__)),
-        "templates",
-        ("_").join(django.get_version().split(".")[0:2]),
-        "login.html"
+        "templates", "login.html",
     )
 
     def __init__(self, *args, **kwargs):

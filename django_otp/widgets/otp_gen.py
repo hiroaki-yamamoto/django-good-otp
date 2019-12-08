@@ -26,6 +26,7 @@ class OTPGenWidget(TextInput):
             enable_btn: Set false not to render 'generate new secret' button.
             embed_script: Set true to embed scrpt. Setting this flag to true
                 is useful when you use this widget in admin panel.
+
         """
         self.img_attrs = kwargs.pop("img_attrs", None) or {}
         self.btn_attrs = kwargs.pop("btn_attrs", None) or {}
