@@ -16,12 +16,12 @@ mccabe==0.6.1             # via flake8
 packaging==19.2           # via tox
 pip-tools==4.3.0
 pluggy==0.13.1            # via tox
-py==1.8.0                 # via tox
+py==1.8.1                 # via tox
 pycodestyle==2.5.0        # via flake8
 pydocstyle==5.0.1         # via flake8-docstrings
 pyflakes==2.1.1           # via flake8
 pyotp==2.3.0
-pyparsing==2.4.5          # via packaging
+pyparsing==2.4.6          # via packaging
 qrcode==6.1
 six==1.13.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
