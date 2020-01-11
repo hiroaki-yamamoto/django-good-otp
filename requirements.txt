@@ -13,7 +13,7 @@ flake8==3.7.9
 jinja2==2.10.3
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-packaging==19.2           # via tox
+packaging==20.0           # via tox
 pip-tools==4.3.0
 pluggy==0.13.1            # via tox
 py==1.8.1                 # via tox
