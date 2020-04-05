@@ -21,7 +21,7 @@ pycodestyle==2.5.0        # via flake8
 pydocstyle==5.0.2         # via flake8-docstrings
 pyflakes==2.1.1           # via flake8
 pyotp==2.3.0
-pyparsing==2.4.6          # via packaging
+pyparsing==2.4.7          # via packaging
 qrcode==6.1
 six==1.14.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
