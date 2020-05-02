@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-click==7.1.1                # via pip-tools
+click==7.1.2                # via pip-tools
 coverage==5.1
 entrypoints==0.3          # via flake8
 filelock==3.0.12          # via tox
@@ -14,7 +14,7 @@ jinja2==2.11.2
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
 packaging==20.3           # via tox
-pip-tools==5.0.0
+pip-tools==5.1.1
 pluggy==0.13.1            # via tox
 py==1.8.1                 # via tox
 pycodestyle==2.5.0        # via flake8
