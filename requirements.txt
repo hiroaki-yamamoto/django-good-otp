@@ -9,11 +9,11 @@ coverage==5.1
 entrypoints==0.3          # via flake8
 filelock==3.0.12          # via tox
 flake8-docstrings==1.5.0
-flake8==3.8.1
+flake8==3.8.2
 jinja2==2.11.2
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-packaging==20.3           # via tox
+packaging==20.4           # via tox
 pip-tools==5.1.2
 pluggy==0.13.1            # via tox
 py==1.8.1                 # via tox
@@ -23,8 +23,8 @@ pyflakes==2.2.0           # via flake8
 pyotp==2.3.0
 pyparsing==2.4.7          # via packaging
 qrcode==6.1
-six==1.14.0               # via packaging, pip-tools, qrcode, tox
+six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.1              # via tox
-tox==3.15.0
-virtualenv==20.0.20        # via tox
+tox==3.15.1
+virtualenv==20.0.21        # via tox
