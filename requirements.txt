@@ -26,5 +26,5 @@ qrcode==6.1
 six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.1              # via tox
-tox==3.15.1
+tox==3.15.2
 virtualenv==20.0.21        # via tox
