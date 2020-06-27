@@ -16,7 +16,7 @@ mccabe==0.6.1             # via flake8
 packaging==20.4           # via tox
 pip-tools==5.2.1
 pluggy==0.13.1            # via tox
-py==1.8.2                 # via tox
+py==1.9.0                 # via tox
 pycodestyle==2.6.0        # via flake8
 pydocstyle==5.0.2         # via flake8-docstrings
 pyflakes==2.2.0           # via flake8
@@ -26,5 +26,5 @@ qrcode==6.1
 six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.1              # via tox
-tox==3.15.2
-virtualenv==20.0.23        # via tox
+tox==3.16.0
+virtualenv==20.0.25        # via tox
