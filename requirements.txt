@@ -25,6 +25,6 @@ pyparsing==2.4.7          # via packaging
 qrcode==6.1
 six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
-toml==0.10.1              # via tox
+toml==0.10.2              # via tox
 tox==3.20.1
 virtualenv==20.1.0        # via tox
