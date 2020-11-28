@@ -13,7 +13,7 @@ flake8==3.8.4
 jinja2==2.11.2
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via flake8
-packaging==20.4           # via tox
+packaging==20.5           # via tox
 pip-tools==5.4.0
 pluggy==0.13.1            # via tox
 py==1.9.0                 # via tox
@@ -27,4 +27,4 @@ six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.2              # via tox
 tox==3.20.1
-virtualenv==20.2.0        # via tox
+virtualenv==20.2.1        # via tox
