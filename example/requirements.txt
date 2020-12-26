@@ -9,6 +9,6 @@ django==3.1.4
 jinja2==2.11.2              # via django-good-otp
 markupsafe==1.1.1           # via jinja2
 pyotp==2.4.1              # via django-good-otp
-pytz==2020.4              # via django
+pytz==2020.5              # via django
 qrcode==6.1               # via django-good-otp
 six==1.15.0               # via qrcode
