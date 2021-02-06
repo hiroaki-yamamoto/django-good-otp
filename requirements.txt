@@ -20,11 +20,11 @@ py==1.10.0                 # via tox
 pycodestyle==2.6.0        # via flake8
 pydocstyle==5.1.1         # via flake8-docstrings
 pyflakes==2.2.0           # via flake8
-pyotp==2.5.1
+pyotp==2.6.0
 pyparsing==2.4.7          # via packaging
 qrcode==6.1
 six==1.15.0               # via packaging, pip-tools, qrcode, tox
 snowballstemmer==2.1.0    # via pydocstyle
 toml==0.10.2              # via tox
-tox==3.21.3
-virtualenv==20.4.1        # via tox
+tox==3.21.4
+virtualenv==20.4.2        # via tox
