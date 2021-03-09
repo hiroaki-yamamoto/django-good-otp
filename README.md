@@ -132,6 +132,7 @@ from django.contrib import admin
 from django_otp.admin import AdminSite
 
 OTPAdmin.enable()
+admin.site = AdminSite()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
