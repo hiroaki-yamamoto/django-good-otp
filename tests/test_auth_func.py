@@ -25,7 +25,7 @@ class AuthenticateFunctionTestDj111(TestCase):
     """Authenticate function test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.request = RequestFactory().get("/")
 
     @patch.object(OTPAuthenticationBackend, "authenticate", autospec=True)

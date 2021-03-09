@@ -14,7 +14,7 @@ class OTPGenWidgetTemplateLoadTest(TestCase):
     """OTPGenerator template load test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget()
         self.env = Environment(
             loader=PackageLoader("django_otp.widgets", "files")
@@ -55,7 +55,7 @@ class OTPGenWidgetTemplateLoadWithoutValueTest(TestCase):
     """OTP Secret Generator widget without value test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget()
         self.env = Environment(
             loader=PackageLoader("django_otp.widgets", "files")

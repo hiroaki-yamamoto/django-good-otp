@@ -15,7 +15,7 @@ class OTPGenFieldTestBase(object):
     """OTP secret key generator test base."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.form = self.Form()
 
     def test_img(self):

@@ -13,7 +13,7 @@ class DBIntegrationTestBase(object):
     """Database integration test base."""
 
     def setUp(self, *args, **kwargs):
-        """Setup."""
+        """Set up."""
         super(DBIntegrationTestBase, self).setUp(*args, **kwargs)
         self.users = [
             get_user_model().objects.create_user(

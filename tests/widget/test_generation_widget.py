@@ -19,7 +19,7 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, loader, env):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget()
         self.loader = loader
         self.env = env
@@ -73,7 +73,7 @@ class OTPGenWidgetInitWithTextAttrTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.txt_attrs = {"data-ng-model": "model.secret"}
         self.widget = OTPGenWidget(attrs={"data-ng-model": "model.secret"})
 
@@ -88,7 +88,7 @@ class OTPGenWidgetInitWithImgAttrTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.img_attrs = {"data-ng-src": "{{ model.secret }}"}
         self.widget = OTPGenWidget(img_attrs=self.img_attrs)
 
@@ -103,7 +103,7 @@ class OTPgenWidgetButtonAttrTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.btn_attrs = {"data-ng-click": "test()", "type": "button"}
         self.widget = OTPGenWidget(btn_attrs=self.btn_attrs)
 
@@ -122,7 +122,7 @@ class OTPgenWidgetButtonLabelTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.btn_label = "Hello World"
         self.widget = OTPGenWidget(btn_label=self.btn_label)
 
@@ -137,7 +137,7 @@ class OTPGenWidgetInitImgDiasbledTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget(enable_img=False)
 
     def test_img_flag(self):
@@ -151,7 +151,7 @@ class OTPGenWidgetBtnDisabledTest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget(enable_btn=False)
 
     def test_btn_flag(self):
@@ -165,7 +165,7 @@ class OTPGenWidgetEmbedScriptEnabledtest(TestCase):
     @patch("django_otp.widgets.otp_gen.Environment")
     @patch("django_otp.widgets.otp_gen.PackageLoader")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.widget = OTPGenWidget(embed_script=True)
 
     def test_script_flag(self):

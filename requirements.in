@@ -6,3 +6,4 @@ pyotp
 qrcode
 tox
 pip-tools
+django

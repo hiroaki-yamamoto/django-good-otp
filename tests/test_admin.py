@@ -33,7 +33,7 @@ class AdminPanelRegistrationTest(TestCase):
     """settings.ENABLE_OTP_ADMIN = True test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.admin = OTPAdmin
 
     def test_panel_type(self):
@@ -51,7 +51,7 @@ class AdminSiteInitialStateTest(TestCase):
     """Admin site initial state test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.data = {"test1": "test", "test2": "test0"}
 
     def test_register_dict(self):
@@ -66,7 +66,7 @@ class AdminSiteInitialStateInheritTrueTest(TestCase):
     """Admin site initial state test when inherit_panels=Truthy."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.data = {"test1": "test", "test2": "test0"}
 
     def test_register_dict(self):
@@ -90,7 +90,7 @@ class AdminOTPGenerationFormTest(DBIntegrationTestBase, TestCase):
     """OTPGeneration form test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         super(AdminOTPGenerationFormTest, self).setUp()
         self.form = OTPGenerationForm(instance=self.secret)
 
@@ -108,7 +108,7 @@ class AdminOTPGenerationFormNoInstnaceTest(TestCase):
     """OTPGeneration form without model instancetest."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         self.form = OTPGenerationForm()
 
     def test_img_src(self):

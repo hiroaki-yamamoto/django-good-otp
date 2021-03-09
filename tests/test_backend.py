@@ -34,7 +34,7 @@ class AuthenticationBackendTestDj111(DBIntegrationTestBase, TestCase):
     """Authentication function invokation test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         super(AuthenticationBackendTestDj111, self).setUp()
         self.backend = OTPAuthBackend()
         self.req = RequestFactory().get("/test")
@@ -89,7 +89,7 @@ class AuthenticationBackendTestDj110(DBIntegrationTestBase, TestCase):
     """Authentication function invokation test."""
 
     def setUp(self):
-        """Setup."""
+        """Set up."""
         super(AuthenticationBackendTestDj110, self).setUp()
         self.backend = OTPAuthBackend()
 

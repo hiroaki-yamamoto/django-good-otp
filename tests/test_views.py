@@ -31,7 +31,7 @@ class QRCodeViewTestBase(TestCase):
     """QR Code view test base."""
 
     def setUp(self, build_otp_uri, generate_qrcode, **query_args):
-        """Setup."""
+        """Set up."""
         self.secret = gen_otp_secret()
         query_str = ("?" + urlencode(query_args)) if query_args else ""
         self.request = RequestFactory().get(
@@ -59,7 +59,7 @@ class QRCodeViewTest(QRCodeViewTestBase):
     @patch("django_otp.views.generate_qrcode")
     @patch("django_otp.views.build_otp_uri")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         super(QRCodeViewTest, self).setUp(*args)
 
     def test_status_code(self):
@@ -93,7 +93,7 @@ class QRCodeViewWithNameTest(QRCodeViewTestBase):
     @patch("django_otp.views.generate_qrcode")
     @patch("django_otp.views.build_otp_uri")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.name = "Test Example"
         super(QRCodeViewWithNameTest, self).setUp(*args, name=self.name)
 
@@ -113,7 +113,7 @@ class QRCodeViewWithIssuerNameTest(QRCodeViewTestBase):
     @patch("django_otp.views.generate_qrcode")
     @patch("django_otp.views.build_otp_uri")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.issuer_name = "Test Example"
         super(QRCodeViewWithIssuerNameTest, self).setUp(
             *args, issuer_name=self.issuer_name
@@ -137,7 +137,7 @@ class QRCodeViewWithNameAndIssuerTest(QRCodeViewTestBase):
     @patch("django_otp.views.generate_qrcode")
     @patch("django_otp.views.build_otp_uri")
     def setUp(self, *args):
-        """Setup."""
+        """Set up."""
         self.issuer_name = "Test Example"
         self.name = "Test Name"
         super(QRCodeViewWithNameAndIssuerTest, self).setUp(

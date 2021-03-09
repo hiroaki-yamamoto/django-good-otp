@@ -4,27 +4,63 @@
 #
 #    pip-compile
 #
-click==7.1.2                # via pip-tools
+appdirs==1.4.4
+    # via virtualenv
+click==7.1.2
+    # via pip-tools
 coverage==5.5
-entrypoints==0.3          # via flake8
-filelock==3.0.12          # via tox
+    # via -r requirements.in
+distlib==0.3.1
+    # via virtualenv
+filelock==3.0.12
+    # via
+    #   tox
+    #   virtualenv
 flake8-docstrings==1.5.0
+    # via -r requirements.in
 flake8==3.8.4
+    # via
+    #   -r requirements.in
+    #   flake8-docstrings
 jinja2==2.11.3
-markupsafe==1.1.1         # via jinja2
-mccabe==0.6.1             # via flake8
-packaging==20.9           # via tox
+    # via -r requirements.in
+markupsafe==1.1.1
+    # via jinja2
+mccabe==0.6.1
+    # via flake8
+packaging==20.9
+    # via tox
 pip-tools==5.5.0
-pluggy==0.13.1            # via tox
-py==1.10.0                 # via tox
-pycodestyle==2.6.0        # via flake8
-pydocstyle==5.1.1         # via flake8-docstrings
-pyflakes==2.2.0           # via flake8
+    # via -r requirements.in
+pluggy==0.13.1
+    # via tox
+py==1.10.0
+    # via tox
+pycodestyle==2.6.0
+    # via flake8
+pydocstyle==5.1.1
+    # via flake8-docstrings
+pyflakes==2.2.0
+    # via flake8
 pyotp==2.6.0
-pyparsing==2.4.7          # via packaging
+    # via -r requirements.in
+pyparsing==2.4.7
+    # via packaging
 qrcode==6.1
-six==1.15.0               # via packaging, pip-tools, qrcode, tox
-snowballstemmer==2.1.0    # via pydocstyle
-toml==0.10.2              # via tox
+    # via -r requirements.in
+six==1.15.0
+    # via
+    #   qrcode
+    #   tox
+    #   virtualenv
+snowballstemmer==2.1.0
+    # via pydocstyle
+toml==0.10.2
+    # via tox
 tox==3.23.0
-virtualenv==20.4.2        # via tox
+    # via -r requirements.in
+virtualenv==20.4.2
+    # via tox
+
+# The following packages are considered to be unsafe in a requirements file:
+# pip

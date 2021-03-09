@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
-"""Setup script."""
+"""Set up script."""
 
 import os.path as path
 import sys
