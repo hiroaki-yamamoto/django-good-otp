@@ -1,4 +1,5 @@
 include package.json
+include VERSION
 recursive-include django_otp/widgets/files *
 recursive-include django_otp/templates *
 recursive-include django_otp/static *
