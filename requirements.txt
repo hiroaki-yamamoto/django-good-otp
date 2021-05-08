@@ -48,7 +48,7 @@ pyparsing==2.4.7
     # via packaging
 qrcode==6.1
     # via -r requirements.in
-six==1.15.0
+six==1.16.0
     # via
     #   qrcode
     #   tox
@@ -57,9 +57,9 @@ snowballstemmer==2.1.0
     # via pydocstyle
 toml==0.10.2
     # via tox
-tox==3.23.0
+tox==3.23.1
     # via -r requirements.in
-virtualenv==20.4.4
+virtualenv==20.4.6
     # via tox
 
 # The following packages are considered to be unsafe in a requirements file:
