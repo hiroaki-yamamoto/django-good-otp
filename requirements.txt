@@ -6,7 +6,7 @@
 #
 appdirs==1.4.4
     # via virtualenv
-click==7.1.2
+click==8.0.0
     # via pip-tools
 coverage==5.5
     # via -r requirements.in
@@ -22,9 +22,9 @@ flake8==3.9.2
     # via
     #   -r requirements.in
     #   flake8-docstrings
-jinja2==2.11.3
+jinja2==3.0.0
     # via -r requirements.in
-markupsafe==1.1.1
+markupsafe==2.0.0
     # via jinja2
 mccabe==0.6.1
     # via flake8
