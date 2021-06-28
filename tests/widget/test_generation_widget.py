@@ -52,7 +52,7 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
         """Check template load."""
         ret = self.widget.template
         self.loader.assert_called_once_with(
-            "django_otp.widgets.otp_gen", "files"
+            "django_otp.widgets", "files"
         )
         self.env.assert_called_once_with(loader=self.loader.return_value)
         self.assertEqual(self.env.return_value.get_template.call_count, 4)
