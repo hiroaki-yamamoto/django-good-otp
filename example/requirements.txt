@@ -10,5 +10,5 @@ jinja2==3.0.1              # via django-good-otp
 markupsafe==2.0.1           # via jinja2
 pyotp==2.6.0              # via django-good-otp
 pytz==2021.1              # via django
-qrcode==6.1               # via django-good-otp
+qrcode==7.1               # via django-good-otp
 six==1.16.0               # via qrcode
