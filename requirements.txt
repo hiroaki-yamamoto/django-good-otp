@@ -46,7 +46,7 @@ pyotp==2.6.0
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
-qrcode==7.2
+qrcode==7.3
     # via -r requirements.in
 six==1.16.0
     # via
@@ -57,7 +57,7 @@ snowballstemmer==2.1.0
     # via pydocstyle
 toml==0.10.2
     # via tox
-tox==3.24.1
+tox==3.24.2
     # via -r requirements.in
 virtualenv==20.7.2
     # via tox
