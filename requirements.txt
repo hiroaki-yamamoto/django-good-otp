@@ -12,7 +12,7 @@ coverage==5.5
     # via -r requirements.in
 distlib==0.3.3
     # via virtualenv
-filelock==3.0.12
+filelock==3.2.0
     # via
     #   tox
     #   virtualenv
@@ -46,7 +46,7 @@ pyotp==2.6.0
     # via -r requirements.in
 pyparsing==2.4.7
     # via packaging
-qrcode==7.3
+qrcode==7.3.1
     # via -r requirements.in
 six==1.16.0
     # via
