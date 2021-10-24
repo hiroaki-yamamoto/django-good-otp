@@ -44,7 +44,7 @@ pyflakes==2.4.0
     # via flake8
 pyotp==2.6.0
     # via -r requirements.in
-pyparsing==2.4.7
+pyparsing==3.0.1
     # via packaging
 qrcode==7.3.1
     # via -r requirements.in
