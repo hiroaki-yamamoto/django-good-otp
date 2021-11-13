@@ -6,11 +6,11 @@
 #
 asgiref==3.4.1
     # via django
-backports.entry-points-selectable==1.1.0
+backports.entry-points-selectable==1.1.1
     # via virtualenv
 click==8.0.3
     # via pip-tools
-coverage==6.1.1
+coverage==6.1.2
     # via -r requirements.in
 distlib==0.3.3
     # via virtualenv
@@ -26,7 +26,7 @@ flake8==4.0.1
     # via
     #   -r requirements.in
     #   flake8-docstrings
-jinja2==3.0.2
+jinja2==3.0.3
     # via -r requirements.in
 markupsafe==2.0.1
     # via jinja2
