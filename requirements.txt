@@ -16,7 +16,7 @@ distlib==0.3.3
     # via virtualenv
 django==3.2.9
     # via -r requirements.in
-filelock==3.3.2
+filelock==3.4.0
     # via
     #   tox
     #   virtualenv
@@ -32,7 +32,7 @@ markupsafe==2.0.1
     # via jinja2
 mccabe==0.6.1
     # via flake8
-packaging==21.2
+packaging==21.3
     # via tox
 pep517==0.12.0
     # via pip-tools
@@ -62,7 +62,7 @@ six==1.16.0
     # via
     #   tox
     #   virtualenv
-snowballstemmer==2.1.0
+snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.4.2
     # via django
