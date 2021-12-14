@@ -3,12 +3,12 @@
 
 """URL routings."""
 
-from django.conf.urls import url
+from django.urls import re_path
 from .views import QRCodeView
 
 app_name = "django_otp"
 urlpatterns = (
-    url(
+    re_path(
         r"^qrcode/(?P<secret>[a-zA-Z2-7]{16})$",
         QRCodeView.as_view(), name="qrcode"
     ),

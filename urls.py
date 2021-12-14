@@ -3,8 +3,8 @@
 
 """URL routings."""
 
-from django.conf.urls import url, include
+from django.urls import path, include
 
 urlpatterns = (
-    url(r"", include("django_otp.urls")),
+    path("", include("django_otp.urls")),
 )

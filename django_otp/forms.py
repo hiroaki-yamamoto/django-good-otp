@@ -6,7 +6,7 @@
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm as DjangoAuthForm
 from django import forms
-from django.utils.translation import ugettext_lazy as _lz
+from django.utils.translation import gettext_lazy as _lz
 
 
 class AuthenticationForm(DjangoAuthForm):

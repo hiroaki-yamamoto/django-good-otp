@@ -11,7 +11,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 from django.contrib.staticfiles.finders import find
 from django.core.urlresolvers import reverse, resolve
 from django.urls import NoReverseMatch
-from django.utils.translation import ugettext, ungettext
+from django.utils.translation import gettext, ngettext
 
 
 def __static_exists__(path):
@@ -39,7 +39,7 @@ def jinja_options(**env):
         "urlparse": urlparse,
         "resolve": resolve,
         "getattr": getattr,
-        "_": ugettext,
-        "_n": ungettext
+        "_": gettext,
+        "_n": ngettext
     })
     return environ

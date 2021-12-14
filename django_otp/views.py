@@ -8,7 +8,7 @@ from io import BytesIO
 from django.conf import settings
 from django.http import HttpResponse
 from django.views.generic import View
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
 from pyotp.utils import build_uri as build_otp_uri
 from qrcode import make as generate_qrcode
