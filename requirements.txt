@@ -14,7 +14,7 @@ coverage==6.2
     # via -r requirements.in
 distlib==0.3.3
     # via virtualenv
-django==3.2.9
+django==4.0
     # via -r requirements.in
 filelock==3.4.0
     # via
@@ -52,7 +52,7 @@ pyflakes==2.4.0
     # via flake8
 pyotp==2.6.0
     # via -r requirements.in
-pyparsing==2.4.7
+pyparsing==3.0.6
     # via packaging
 pytz==2021.3
     # via django
@@ -68,7 +68,7 @@ sqlparse==0.4.2
     # via django
 toml==0.10.2
     # via tox
-tomli==1.2.2
+tomli==2.0.0
     # via pep517
 tox==3.24.4
     # via -r requirements.in
