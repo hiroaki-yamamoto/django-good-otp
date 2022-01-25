@@ -1,13 +1,15 @@
 # Yet Another Implementation of OTP for Django
 
-[![CI]][CI Link] [![CovSt]][CovStLink] [![GPA]][GPALink]
+[![Test]][Test Link] [![Deploy]][Deploy Link]  [![Climate Ment]][Climate Ment Link] [![Cov]][CovLink]
 
-[CI]: https://circleci.com/gh/hiroaki-yamamoto/django-good-otp.svg?style=svg
-[CI Link]: https://circleci.com/gh/hiroaki-yamamoto/django-good-otp
-[CovSt]: https://coveralls.io/repos/github/hiroaki-yamamoto/django-good-otp/badge.svg?branch=master
-[CovStLink]: https://coveralls.io/github/hiroaki-yamamoto/django-good-otp?branch=master
-[GPA]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/badges/gpa.svg
-[GPALink]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp
+[Test]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/test.yml/badge.svg
+[Test Link]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/test.yml
+[Deploy]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/deploy.yml/badge.svg
+[Deploy Link]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/deploy.yml
+[Cov]: https://api.codeclimate.com/v1/badges/a7fd8fd626e3477e28e9/test_coverage
+[CovLink]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/test_coverage
+[Climate Ment]: https://api.codeclimate.com/v1/badges/a7fd8fd626e3477e28e9/maintainability
+[Climate Ment Link]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/maintainability
 
 ## What This?
 
