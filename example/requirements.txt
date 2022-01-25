@@ -4,8 +4,8 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-django-good-otp==1.2.2
-django==4.0
+django-good-otp==2.0.0
+django==4.0.1
 jinja2==3.0.3              # via django-good-otp
 markupsafe==2.0.1           # via jinja2
 pyotp==2.6.0              # via django-good-otp

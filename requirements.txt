@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-asgiref==3.4.1
+asgiref==3.5.0
     # via django
 backports.entry-points-selectable==1.1.1
     # via virtualenv
@@ -14,9 +14,9 @@ coverage==6.2
     # via -r requirements.in
 distlib==0.3.4
     # via virtualenv
-django==4.0
+django==4.0.1
     # via -r requirements.in
-filelock==3.4.0
+filelock==3.4.2
     # via
     #   tox
     #   virtualenv
@@ -38,7 +38,7 @@ pep517==0.12.0
     # via pip-tools
 pip-tools==6.4.0
     # via -r requirements.in
-platformdirs==2.4.0
+platformdirs==2.4.1
     # via virtualenv
 pluggy==1.0.0
     # via tox
@@ -52,7 +52,7 @@ pyflakes==2.4.0
     # via flake8
 pyotp==2.6.0
     # via -r requirements.in
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
 pytz==2021.3
     # via django
@@ -70,11 +70,11 @@ toml==0.10.2
     # via tox
 tomli==2.0.0
     # via pep517
-tox==3.24.4
+tox==3.24.5
     # via -r requirements.in
-virtualenv==20.10.0
+virtualenv==20.13.0
     # via tox
-wheel==0.37.0
+wheel==0.37.1
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
