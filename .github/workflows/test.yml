@@ -1,0 +1,50 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-${{ hashFiles('./requirements.txt') }}
+          path: |
+            ~/.cache/pip
+            ./.tox
+      - name: Download coverage
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 \
+            -o ./cc-test-reporter
+          chmod +x ./cc-test-reporter
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test & Send Coverage
+        run: |
+          export GIT_COMMITTED_AT=$(date +%s)
+          ./cc-test-reporter before-build
+          tox -p all -q
+          export TEST_RESULT=${?}
+          export GIT_BRANCH=${{ github.ref_name }}
+          echo $GIT_BRANCH
+          coverage xml
+          ./cc-test-reporter after-build --exit-code $TEST_RESULT -t coverage.py
+        env:
+          GIT_COMMIT_SHA: ${{ github.sha }}
+          CI_NAME: "Github Action"
+          CI_BUILD_ID: ${{ github.run_number }}
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
