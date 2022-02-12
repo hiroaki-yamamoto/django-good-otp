@@ -24,7 +24,7 @@
   },
   "packageRules": [
     {
-      matchLanguages: ["pip"],
+      matchLanguages: ["python"],
       matchPackageNames: [ "mccabe" ],
       allowedVersions: "<0.7"
     }
