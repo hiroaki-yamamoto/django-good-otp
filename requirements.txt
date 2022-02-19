@@ -8,7 +8,7 @@ asgiref==3.5.0
     # via django
 backports.entry-points-selectable==1.1.1
     # via virtualenv
-click==8.0.3
+click==8.0.4
     # via pip-tools
 coverage==6.3.1
     # via -r requirements.in
@@ -16,7 +16,7 @@ distlib==0.3.4
     # via virtualenv
 django==4.0.2
     # via -r requirements.in
-filelock==3.4.2
+filelock==3.6.0
     # via
     #   tox
     #   virtualenv
@@ -28,7 +28,7 @@ flake8==4.0.1
     #   flake8-docstrings
 jinja2==3.0.3
     # via -r requirements.in
-markupsafe==2.0.1
+markupsafe==2.1.0
     # via jinja2
 mccabe==0.6.1
     # via flake8
