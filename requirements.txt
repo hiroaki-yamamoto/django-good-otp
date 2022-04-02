@@ -8,7 +8,7 @@ asgiref==3.5.0
     # via django
 backports.entry-points-selectable==1.1.1
     # via virtualenv
-click==8.0.4
+click==8.1.2
     # via pip-tools
 coverage==6.3.2
     # via -r requirements.in
