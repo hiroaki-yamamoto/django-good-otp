@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-asgiref==3.5.1
+asgiref==3.5.2
     # via django
 backports.entry-points-selectable==1.1.1
     # via virtualenv
