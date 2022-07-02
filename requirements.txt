@@ -36,7 +36,7 @@ packaging==21.3
     # via tox
 pep517==0.12.0
     # via pip-tools
-pip-tools==6.6.2
+pip-tools==6.8.0
     # via -r requirements.in
 platformdirs==2.5.2
     # via virtualenv
@@ -70,9 +70,9 @@ toml==0.10.2
     # via tox
 tomli==2.0.1
     # via pep517
-tox==3.25.0
+tox==3.25.1
     # via -r requirements.in
-virtualenv==20.15.0
+virtualenv==20.15.1
     # via tox
 wheel==0.37.1
     # via pip-tools
