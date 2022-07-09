@@ -14,7 +14,7 @@ coverage==6.4.1
     # via -r requirements.in
 distlib==0.3.4
     # via virtualenv
-django==4.0.5
+django==4.0.6
     # via -r requirements.in
 filelock==3.7.1
     # via
