@@ -44,11 +44,11 @@ pluggy==1.0.0
     # via tox
 py==1.11.0
     # via tox
-pycodestyle==2.8.0
+pycodestyle==2.9.0
     # via flake8
 pydocstyle==6.1.1
     # via flake8-docstrings
-pyflakes==2.4.0
+pyflakes==2.5.0
     # via flake8
 pyotp==2.6.0
     # via -r requirements.in
