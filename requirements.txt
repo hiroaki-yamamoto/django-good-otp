@@ -72,7 +72,7 @@ tomli==2.0.1
     #   pep517
 tox==3.25.1
     # via -r requirements.in
-virtualenv==20.16.3
+virtualenv==20.16.4
     # via tox
 wheel==0.37.1
     # via pip-tools
