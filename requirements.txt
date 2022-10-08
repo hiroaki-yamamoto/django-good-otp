@@ -14,7 +14,7 @@ coverage==6.5.0
     # via -r requirements.in
 distlib==0.3.6
     # via virtualenv
-django==4.1.1
+django==4.1.2
     # via -r requirements.in
 filelock==3.8.0
     # via
@@ -38,7 +38,7 @@ packaging==21.3
     #   tox
 pep517==0.13.0
     # via build
-pip-tools==6.8.0
+pip-tools==6.9.0
     # via -r requirements.in
 platformdirs==2.5.2
     # via virtualenv
