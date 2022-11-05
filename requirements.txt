@@ -74,7 +74,7 @@ tox==3.27.0
     # via -r requirements.in
 virtualenv==20.16.6
     # via tox
-wheel==0.38.1
+wheel==0.38.2
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
