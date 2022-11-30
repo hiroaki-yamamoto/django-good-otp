@@ -20,7 +20,7 @@ filelock==3.8.0
     # via
     #   tox
     #   virtualenv
-flake8==5.0.4
+flake8==6.0.0
     # via
     #   -r requirements.in
     #   flake8-docstrings
@@ -50,7 +50,7 @@ pycodestyle==2.10.0
     # via flake8
 pydocstyle==6.1.1
     # via flake8-docstrings
-pyflakes==2.5.0
+pyflakes==3.0.1
     # via flake8
 pyotp==2.7.0
     # via -r requirements.in
