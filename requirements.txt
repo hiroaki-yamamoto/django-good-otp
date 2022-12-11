@@ -32,7 +32,7 @@ markupsafe==2.1.1
     # via jinja2
 mccabe==0.7.0
     # via flake8
-packaging==21.3
+packaging==22.0
     # via
     #   build
     #   tox
@@ -70,7 +70,7 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==3.27.1
+tox==4.0.8
     # via -r requirements.in
 virtualenv==20.17.1
     # via tox
