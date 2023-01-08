@@ -48,7 +48,7 @@ py==1.11.0
     # via tox
 pycodestyle==2.10.0
     # via flake8
-pydocstyle==6.2.2
+pydocstyle==6.2.3
     # via flake8-docstrings
 pyflakes==3.0.1
     # via flake8
