@@ -70,7 +70,7 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.3.0
+tox==4.3.1
     # via -r requirements.in
 virtualenv==20.17.1
     # via tox
