@@ -28,7 +28,7 @@ flake8-docstrings==1.6.0
     # via -r requirements.in
 jinja2==3.1.2
     # via -r requirements.in
-markupsafe==2.1.1
+markupsafe==2.1.2
     # via jinja2
 mccabe==0.7.0
     # via flake8
@@ -48,7 +48,7 @@ py==1.11.0
     # via tox
 pycodestyle==2.10.0
     # via flake8
-pydocstyle==6.2.3
+pydocstyle==6.3.0
     # via flake8-docstrings
 pyflakes==3.0.1
     # via flake8
@@ -70,7 +70,7 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.3.1
+tox==4.3.5
     # via -r requirements.in
 virtualenv==20.17.1
     # via tox
