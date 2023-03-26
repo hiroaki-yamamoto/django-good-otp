@@ -16,7 +16,7 @@ distlib==0.3.6
     # via virtualenv
 django==4.1.7
     # via -r requirements.in
-filelock==3.10.4
+filelock==3.10.6
     # via
     #   tox
     #   virtualenv
@@ -40,7 +40,7 @@ pep517==0.13.0
     # via build
 pip-tools==6.12.3
     # via -r requirements.in
-platformdirs==3.1.1
+platformdirs==3.2.0
     # via virtualenv
 pluggy==1.0.0
     # via tox
