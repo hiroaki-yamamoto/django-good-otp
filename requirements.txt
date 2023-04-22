@@ -62,7 +62,7 @@ six==1.16.0
     # via tox
 snowballstemmer==2.2.0
     # via pydocstyle
-sqlparse==0.4.3
+sqlparse==0.4.4
     # via django
 toml==0.10.2
     # via tox
