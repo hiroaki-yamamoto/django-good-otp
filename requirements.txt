@@ -40,9 +40,9 @@ pep517==0.13.0
     # via build
 pip-tools==6.13.0
     # via -r requirements.in
-platformdirs==3.6.0
+platformdirs==3.8.0
     # via virtualenv
-pluggy==1.0.0
+pluggy==1.2.0
     # via tox
 py==1.11.0
     # via tox
@@ -54,7 +54,7 @@ pyflakes==3.0.1
     # via flake8
 pyotp==2.8.0
     # via -r requirements.in
-pyparsing==3.0.9
+pyparsing==3.1.0
     # via packaging
 qrcode==7.4.2
     # via -r requirements.in
@@ -70,7 +70,7 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.6.2
+tox==4.6.3
     # via -r requirements.in
 virtualenv==20.23.1
     # via tox
