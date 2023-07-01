@@ -38,7 +38,7 @@ packaging==23.1
     #   tox
 pep517==0.13.0
     # via build
-pip-tools==6.13.0
+pip-tools==6.14.0
     # via -r requirements.in
 platformdirs==3.8.0
     # via virtualenv
