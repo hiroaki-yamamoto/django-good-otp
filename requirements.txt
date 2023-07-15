@@ -8,7 +8,7 @@ asgiref==3.7.2
     # via django
 build==0.10.0
     # via pip-tools
-click==8.1.4
+click==8.1.5
     # via pip-tools
 coverage==7.2.7
     # via -r requirements.in
@@ -72,7 +72,7 @@ tomli==2.0.1
     #   pep517
 tox==4.6.4
     # via -r requirements.in
-virtualenv==20.23.1
+virtualenv==20.24.0
     # via tox
 wheel==0.40.0
     # via pip-tools
