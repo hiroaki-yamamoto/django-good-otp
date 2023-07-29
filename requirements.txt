@@ -20,7 +20,7 @@ filelock==3.12.2
     # via
     #   tox
     #   virtualenv
-flake8==6.0.0
+flake8==6.1.0
     # via
     #   -r requirements.in
     #   flake8-docstrings
@@ -40,17 +40,17 @@ pep517==0.13.0
     # via build
 pip-tools==7.1.0
     # via -r requirements.in
-platformdirs==3.9.1
+platformdirs==3.10.0
     # via virtualenv
 pluggy==1.2.0
     # via tox
 py==1.11.0
     # via tox
-pycodestyle==2.10.0
+pycodestyle==2.11.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
-pyflakes==3.0.1
+pyflakes==3.1.0
     # via flake8
 pyotp==2.9.0
     # via -r requirements.in
