@@ -38,7 +38,7 @@ packaging==23.1
     #   tox
 pep517==0.13.0
     # via build
-pip-tools==7.2.0
+pip-tools==7.3.0
     # via -r requirements.in
 platformdirs==3.10.0
     # via virtualenv
@@ -70,9 +70,9 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.6.4
+tox==4.7.0
     # via -r requirements.in
-virtualenv==20.24.2
+virtualenv==20.24.3
     # via tox
 wheel==0.41.1
     # via pip-tools
