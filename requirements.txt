@@ -70,11 +70,11 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.9.0
+tox==4.10.0
     # via -r requirements.in
 virtualenv==20.24.3
     # via tox
-wheel==0.41.1
+wheel==0.41.2
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
