@@ -16,7 +16,7 @@ distlib==0.3.7
     # via virtualenv
 django==4.2.4
     # via -r requirements.in
-filelock==3.12.2
+filelock==3.12.3
     # via
     #   tox
     #   virtualenv
@@ -70,9 +70,9 @@ tomli==2.0.1
     # via
     #   build
     #   pep517
-tox==4.10.0
+tox==4.11.1
     # via -r requirements.in
-virtualenv==20.24.3
+virtualenv==20.24.4
     # via tox
 wheel==0.41.2
     # via pip-tools
