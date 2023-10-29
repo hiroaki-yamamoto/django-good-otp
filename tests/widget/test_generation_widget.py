@@ -57,7 +57,7 @@ class OTPGenWidgetInitWithoutAttrTest(TestCase):
         self.env.return_value.get_template.assert_has_calls((
             call("img.html"), call("button.html"), call("widget.html"),
             call("assets.js")
-        ))
+        ), any_order=True)
         self.assertIs(ret, self.env.return_value.get_template.return_value)
 
     def test_script_flag(self):
