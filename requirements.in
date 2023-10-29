@@ -7,3 +7,4 @@ qrcode
 tox
 pip-tools
 django
+setuptools
