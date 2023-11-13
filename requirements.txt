@@ -45,7 +45,7 @@ packaging==23.2
     #   tox
 pip-tools==7.3.0
     # via -r requirements.in
-platformdirs==4.0.0
+platformdirs==3.11.0
     # via
     #   tox
     #   virtualenv
