@@ -20,7 +20,7 @@ coverage==7.3.2
     # via -r requirements.in
 distlib==0.3.7
     # via virtualenv
-django==4.2.7
+django==4.2.8
     # via -r requirements.in
 filelock==3.13.1
     # via
