@@ -20,7 +20,7 @@ coverage==7.3.2
     # via -r requirements.in
 distlib==0.3.7
     # via virtualenv
-django==4.2.8
+django==5.0
     # via -r requirements.in
 filelock==3.13.1
     # via
@@ -45,7 +45,7 @@ packaging==23.2
     #   tox
 pip-tools==7.3.0
     # via -r requirements.in
-platformdirs==3.11.0
+platformdirs==4.1.0
     # via
     #   tox
     #   virtualenv
