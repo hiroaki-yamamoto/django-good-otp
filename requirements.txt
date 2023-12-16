@@ -16,9 +16,9 @@ click==8.1.7
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.3.2
+coverage==7.3.3
     # via -r requirements.in
-distlib==0.3.7
+distlib==0.3.8
     # via virtualenv
 django==5.0
     # via -r requirements.in
