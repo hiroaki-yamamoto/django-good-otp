@@ -34,7 +34,7 @@ flake8-docstrings==1.7.0
     # via -r requirements.in
 jinja2==3.1.3
     # via -r requirements.in
-markupsafe==2.1.4
+markupsafe==2.1.5
     # via jinja2
 mccabe==0.7.0
     # via flake8
@@ -45,7 +45,7 @@ packaging==23.2
     #   tox
 pip-tools==7.3.0
     # via -r requirements.in
-platformdirs==4.1.0
+platformdirs==4.2.0
     # via
     #   tox
     #   virtualenv
