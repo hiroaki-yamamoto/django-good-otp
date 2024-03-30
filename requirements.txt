@@ -6,7 +6,7 @@
 #
 asgiref==3.8.1
     # via django
-build==1.1.1
+build==1.2.1
     # via pip-tools
 cachetools==5.3.3
     # via tox
@@ -22,7 +22,7 @@ distlib==0.3.8
     # via virtualenv
 django==5.0.3
     # via -r requirements.in
-filelock==3.13.1
+filelock==3.13.3
     # via
     #   tox
     #   virtualenv
