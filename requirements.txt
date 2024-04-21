@@ -49,7 +49,7 @@ platformdirs==4.2.0
     # via
     #   tox
     #   virtualenv
-pluggy==1.4.0
+pluggy==1.5.0
     # via tox
 pycodestyle==2.11.1
     # via flake8
