@@ -45,7 +45,7 @@ packaging==24.0
     #   tox
 pip-tools==7.4.1
     # via -r requirements.in
-platformdirs==4.2.1
+platformdirs==4.2.2
     # via
     #   tox
     #   virtualenv
@@ -75,7 +75,7 @@ tox==4.15.0
     # via -r requirements.in
 typing-extensions==4.11.0
     # via qrcode
-virtualenv==20.26.1
+virtualenv==20.26.2
     # via tox
 wheel==0.43.0
     # via pip-tools
