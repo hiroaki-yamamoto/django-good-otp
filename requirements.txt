@@ -22,7 +22,7 @@ distlib==0.3.8
     # via virtualenv
 django==5.0.6
     # via -r requirements.in
-filelock==3.15.1
+filelock==3.15.3
     # via
     #   tox
     #   virtualenv
@@ -61,7 +61,7 @@ pyotp==2.9.0
     # via -r requirements.in
 pypng==0.20220715.0
     # via qrcode
-pyproject-api==1.6.1
+pyproject-api==1.7.1
     # via tox
 pyproject-hooks==1.1.0
     # via build
@@ -75,7 +75,7 @@ tox==4.15.1
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
-virtualenv==20.26.2
+virtualenv==20.26.3
     # via tox
 wheel==0.43.0
     # via pip-tools
