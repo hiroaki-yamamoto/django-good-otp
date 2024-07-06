@@ -71,7 +71,7 @@ snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.5.0
     # via django
-tox==4.15.1
+tox==4.16.0
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
