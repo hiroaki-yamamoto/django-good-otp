@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via django
 build==1.2.1
     # via pip-tools
-cachetools==5.3.3
+cachetools==5.4.0
     # via tox
 chardet==5.2.0
     # via tox
@@ -69,7 +69,7 @@ qrcode==7.4.2
     # via -r requirements.in
 snowballstemmer==2.2.0
     # via pydocstyle
-sqlparse==0.5.0
+sqlparse==0.5.1
     # via django
 tox==4.16.0
     # via -r requirements.in
