@@ -75,7 +75,7 @@ tox==4.20.0
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
-virtualenv==20.26.5
+virtualenv==20.26.6
     # via tox
 wheel==0.44.0
     # via pip-tools
