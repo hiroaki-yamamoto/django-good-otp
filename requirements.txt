@@ -16,7 +16,7 @@ click==8.1.7
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.6.2
+coverage==7.6.3
     # via -r requirements.in
 distlib==0.3.9
     # via virtualenv
@@ -34,7 +34,7 @@ flake8-docstrings==1.7.0
     # via -r requirements.in
 jinja2==3.1.4
     # via -r requirements.in
-markupsafe==3.0.1
+markupsafe==3.0.2
     # via jinja2
 mccabe==0.7.0
     # via flake8
@@ -71,11 +71,11 @@ snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.5.1
     # via django
-tox==4.21.2
+tox==4.23.0
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
-virtualenv==20.26.6
+virtualenv==20.27.0
     # via tox
 wheel==0.44.0
     # via pip-tools
