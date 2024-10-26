@@ -16,7 +16,7 @@ click==8.1.7
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.6.3
+coverage==7.6.4
     # via -r requirements.in
 distlib==0.3.9
     # via virtualenv
@@ -71,7 +71,7 @@ snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.5.1
     # via django
-tox==4.23.0
+tox==4.23.2
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
