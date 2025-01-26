@@ -8,7 +8,7 @@ asgiref==3.8.1
     # via django
 build==1.2.2.post1
     # via pip-tools
-cachetools==5.5.0
+cachetools==5.5.1
     # via tox
 chardet==5.2.0
     # via tox
@@ -22,7 +22,7 @@ distlib==0.3.9
     # via virtualenv
 django==5.1.5
     # via -r requirements.in
-filelock==3.16.1
+filelock==3.17.0
     # via
     #   tox
     #   virtualenv
@@ -61,7 +61,7 @@ pyotp==2.9.0
     # via -r requirements.in
 pypng==0.20220715.0
     # via qrcode
-pyproject-api==1.8.0
+pyproject-api==1.9.0
     # via tox
 pyproject-hooks==1.2.0
     # via build
@@ -71,7 +71,7 @@ snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.5.3
     # via django
-tox==4.23.2
+tox==4.24.1
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
