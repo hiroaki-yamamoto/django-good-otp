@@ -71,11 +71,11 @@ snowballstemmer==2.2.0
     # via pydocstyle
 sqlparse==0.5.3
     # via django
-tox==4.24.1
+tox==4.24.2
     # via -r requirements.in
 typing-extensions==4.12.2
     # via qrcode
-virtualenv==20.29.2
+virtualenv==20.29.3
     # via tox
 wheel==0.45.1
     # via pip-tools
