@@ -73,7 +73,7 @@ sqlparse==0.5.3
     # via django
 tox==4.25.0
     # via -r requirements.in
-typing-extensions==4.13.1
+typing-extensions==4.13.2
     # via qrcode
 virtualenv==20.30.0
     # via tox
