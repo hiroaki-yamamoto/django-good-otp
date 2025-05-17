@@ -49,7 +49,7 @@ platformdirs==4.3.8
     # via
     #   tox
     #   virtualenv
-pluggy==1.5.0
+pluggy==1.6.0
     # via tox
 pycodestyle==2.13.0
     # via flake8
@@ -61,7 +61,7 @@ pyotp==2.9.0
     # via -r requirements.in
 pypng==0.20220715.0
     # via qrcode
-pyproject-api==1.9.0
+pyproject-api==1.9.1
     # via tox
 pyproject-hooks==1.2.0
     # via build
@@ -71,7 +71,7 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.3
     # via django
-tox==4.25.0
+tox==4.26.0
     # via -r requirements.in
 typing-extensions==4.13.2
     # via qrcode
