@@ -6,10 +6,10 @@
 [Test Link]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/test.yml
 [Deploy]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/deploy.yml/badge.svg
 [Deploy Link]: https://github.com/hiroaki-yamamoto/django-good-otp/actions/workflows/deploy.yml
-[Cov]: https://api.codeclimate.com/v1/badges/a7fd8fd626e3477e28e9/test_coverage
-[CovLink]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/test_coverage
-[Climate Ment]: https://api.codeclimate.com/v1/badges/a7fd8fd626e3477e28e9/maintainability
-[Climate Ment Link]: https://codeclimate.com/github/hiroaki-yamamoto/django-good-otp/maintainability
+[Cov]: https://qlty.sh/gh/hiroaki-yamamoto/projects/django-good-otp/coverage.svg
+[CovLink]: https://qlty.sh/gh/hiroaki-yamamoto/projects/django-good-otp
+[Climate Ment]: https://qlty.sh/gh/hiroaki-yamamoto/projects/django-good-otp/maintainability.svg
+[Climate Ment Link]: https://qlty.sh/gh/hiroaki-yamamoto/projects/django-good-otp
 
 ## What This?
 
