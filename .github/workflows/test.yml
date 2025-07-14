@@ -41,12 +41,12 @@ jobs:
           export TEST_RESULT=${?}
           export GIT_BRANCH=${{ github.ref_name }}
           echo $GIT_BRANCH
-          coverage xml
+          coverage lcov
         env:
           GIT_COMMIT_SHA: ${{ github.sha }}
           CI_NAME: "Github Action"
           CI_BUILD_ID: ${{ github.run_number }}
       - uses: qltysh/qlty-action/coverage@v1
         with:
-          oicd: true
-          coverage: coverage.xml
+          oidc: true
+          files: coverage.lcov
