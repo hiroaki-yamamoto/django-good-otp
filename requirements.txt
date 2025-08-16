@@ -16,13 +16,13 @@ click==8.2.2
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.10.2
+coverage==7.10.3
     # via -r requirements.in
 distlib==0.4.0
     # via virtualenv
 django==5.2.5
     # via -r requirements.in
-filelock==3.18.0
+filelock==3.19.1
     # via
     #   tox
     #   virtualenv
@@ -75,7 +75,7 @@ tox==4.28.4
     # via -r requirements.in
 typing-extensions==4.14.1
     # via qrcode
-virtualenv==20.33.1
+virtualenv==20.34.0
     # via tox
 wheel==0.45.1
     # via pip-tools
