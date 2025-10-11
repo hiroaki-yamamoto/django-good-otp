@@ -22,7 +22,7 @@ distlib==0.4.0
     # via virtualenv
 django==5.2.7
     # via -r requirements.in
-filelock==3.19.1
+filelock==3.20.0
     # via
     #   tox
     #   virtualenv
@@ -45,7 +45,7 @@ packaging==25.0
     #   tox
 pip-tools==7.5.1
     # via -r requirements.in
-platformdirs==4.4.0
+platformdirs==4.5.0
     # via
     #   tox
     #   virtualenv
@@ -61,7 +61,7 @@ pyotp==2.9.0
     # via -r requirements.in
 pypng==0.20220715.0
     # via qrcode
-pyproject-api==1.9.1
+pyproject-api==1.10.0
     # via tox
 pyproject-hooks==1.2.0
     # via build
@@ -71,11 +71,11 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.3
     # via django
-tox==4.30.3
+tox==4.31.0
     # via -r requirements.in
 typing-extensions==4.15.0
     # via qrcode
-virtualenv==20.34.0
+virtualenv==20.35.3
     # via tox
 wheel==0.45.1
     # via pip-tools
