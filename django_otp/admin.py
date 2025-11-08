@@ -36,7 +36,8 @@ class OTPGenerationForm(forms.ModelForm):
         super(OTPGenerationForm, self).__init__(*args, **kwargs)
 
         # Ensure each form instance works with its own widget so that
-        # per-instance attributes (like the QR code ``src``) do not leak between
+        # per-instance attributes (like the QR code ``src``) do not leak
+        # between
         # different forms.  Django reuses the widget defined on ``Meta`` which
         # meant subsequent forms inherited the previous state.
         self.fields["secret"].widget = OTPGenWidget(
