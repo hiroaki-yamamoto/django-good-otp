@@ -25,8 +25,8 @@
   "packageRules": [
     {
       matchLanguages: ["python"],
-      matchPackageNames: [ "mccabe" ],
-      allowedVersions: "<0.7"
+      matchPackageNames: [ "python" ],
+      allowedVersions: "~3.13"
     }
   ]
 }
