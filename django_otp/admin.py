@@ -35,6 +35,14 @@ class OTPGenerationForm(forms.ModelForm):
         """Init the instance."""
         super(OTPGenerationForm, self).__init__(*args, **kwargs)
 
+        # Ensure each form instance works with its own widget so that
+        # per-instance attributes (like the QR code ``src``) do not leak between
+        # different forms.  Django reuses the widget defined on ``Meta`` which
+        # meant subsequent forms inherited the previous state.
+        self.fields["secret"].widget = OTPGenWidget(
+            embed_script=True, attrs={"class": "secret"}
+        )
+
         def fire_gen(gen_new=True):
             return (
                 "var select=document.querySelector('#{0}');"
