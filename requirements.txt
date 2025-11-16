@@ -12,7 +12,7 @@ cachetools==6.2.2
     # via tox
 chardet==5.2.0
     # via tox
-click==8.3.0
+click==8.3.1
     # via pip-tools
 colorama==0.4.6
     # via tox
