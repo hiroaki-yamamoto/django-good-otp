@@ -69,7 +69,7 @@ qrcode==8.2
     # via -r requirements.in
 snowballstemmer==3.0.1
     # via pydocstyle
-sqlparse==0.5.3
+sqlparse==0.5.4
     # via django
 tox==4.32.0
     # via -r requirements.in
