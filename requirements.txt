@@ -22,7 +22,7 @@ distlib==0.4.0
     # via virtualenv
 django==6.0
     # via -r requirements.in
-filelock==3.20.1
+filelock==3.20.2
     # via
     #   tox
     #   virtualenv
@@ -71,7 +71,7 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.32.0
+tox==4.33.0
     # via -r requirements.in
 virtualenv==20.35.4
     # via tox
