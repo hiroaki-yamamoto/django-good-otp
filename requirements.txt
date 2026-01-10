@@ -6,7 +6,7 @@
 #
 asgiref==3.11.0
     # via django
-build==1.3.0
+build==1.4.0
     # via pip-tools
 cachetools==6.2.4
     # via tox
@@ -20,9 +20,9 @@ coverage==7.13.1
     # via -r requirements.in
 distlib==0.4.0
     # via virtualenv
-django==6.0
+django==6.0.1
     # via -r requirements.in
-filelock==3.20.2
+filelock==3.20.3
     # via
     #   tox
     #   virtualenv
@@ -71,9 +71,9 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.33.0
+tox==4.34.1
     # via -r requirements.in
-virtualenv==20.35.4
+virtualenv==20.36.1
     # via tox
 wheel==0.45.1
     # via pip-tools
