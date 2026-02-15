@@ -22,7 +22,7 @@ distlib==0.4.0
     # via virtualenv
 django==6.0.2
     # via -r requirements.in
-filelock==3.23.0
+filelock==3.24.0
     # via
     #   tox
     #   virtualenv
@@ -45,7 +45,7 @@ packaging==26.0
     #   tox
 pip-tools==7.5.3
     # via -r requirements.in
-platformdirs==4.8.0
+platformdirs==4.9.1
     # via
     #   tox
     #   virtualenv
