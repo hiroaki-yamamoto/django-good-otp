@@ -8,7 +8,7 @@ asgiref==3.11.1
     # via django
 build==1.4.0
     # via pip-tools
-cachetools==7.0.1
+cachetools==7.0.3
     # via tox
 chardet==6.0.0.post1
     # via tox
@@ -45,7 +45,7 @@ packaging==26.0
     #   tox
 pip-tools==7.5.3
     # via -r requirements.in
-platformdirs==4.9.2
+platformdirs==4.9.4
     # via
     #   tox
     #   virtualenv
@@ -71,7 +71,7 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.47.0
+tox==4.49.0
     # via -r requirements.in
 virtualenv==21.1.0
     # via tox
