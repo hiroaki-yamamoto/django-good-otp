@@ -10,13 +10,13 @@ build==1.4.0
     # via pip-tools
 cachetools==7.0.5
     # via tox
-chardet==7.1.0
+chardet==7.2.0
     # via tox
 click==8.3.1
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.13.4
+coverage==7.13.5
     # via -r requirements.in
 distlib==0.4.0
     # via virtualenv
@@ -71,7 +71,7 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.49.1
+tox==4.50.3
     # via -r requirements.in
 virtualenv==21.2.0
     # via tox
