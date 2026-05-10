@@ -6,13 +6,13 @@
 #
 asgiref==3.11.1
     # via django
-build==1.4.0
+build==1.5.0
     # via pip-tools
-cachetools==7.0.5
+cachetools==7.1.1
     # via tox
-chardet==7.2.0
+chardet==7.4.3
     # via tox
-click==8.3.1
+click==8.3.3
     # via pip-tools
 colorama==0.4.6
     # via tox
@@ -22,7 +22,7 @@ distlib==0.4.0
     # via virtualenv
 django==6.0.3
     # via -r requirements.in
-filelock==3.25.2
+filelock==3.29.0
     # via
     #   tox
     #   virtualenv
@@ -38,14 +38,14 @@ markupsafe==3.0.3
     # via jinja2
 mccabe==0.7.0
     # via flake8
-packaging==26.0
+packaging==26.2
     # via
     #   build
     #   pyproject-api
     #   tox
 pip-tools==7.5.3
     # via -r requirements.in
-platformdirs==4.9.4
+platformdirs==4.9.6
     # via
     #   tox
     #   virtualenv
@@ -71,11 +71,11 @@ snowballstemmer==3.0.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.50.3
+tox==4.53.1
     # via -r requirements.in
-virtualenv==21.2.0
+virtualenv==21.3.1
     # via tox
-wheel==0.46.3
+wheel==0.47.0
     # via pip-tools
 
 # The following packages are considered to be unsafe in a requirements file:
