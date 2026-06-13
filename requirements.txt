@@ -22,7 +22,7 @@ distlib==0.4.3
     # via virtualenv
 django==6.0.6
     # via -r requirements.in
-filelock==3.29.3
+filelock==3.29.4
     # via
     #   tox
     #   virtualenv
