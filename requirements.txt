@@ -18,11 +18,11 @@ colorama==0.4.6
     # via tox
 coverage==7.14.1
     # via -r requirements.in
-distlib==0.4.1
+distlib==0.4.3
     # via virtualenv
 django==6.0.6
     # via -r requirements.in
-filelock==3.29.1
+filelock==3.29.3
     # via
     #   tox
     #   virtualenv
@@ -73,7 +73,7 @@ sqlparse==0.5.5
     # via django
 tox==4.55.1
     # via -r requirements.in
-virtualenv==21.4.2
+virtualenv==21.4.3
     # via tox
 wheel==0.47.0
     # via pip-tools
