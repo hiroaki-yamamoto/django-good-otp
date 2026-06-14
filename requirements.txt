@@ -57,7 +57,7 @@ pydocstyle==6.3.0
     # via flake8-docstrings
 pyflakes==3.4.0
     # via flake8
-pyotp==2.9.0
+pyotp==2.10.0
     # via -r requirements.in
 pyproject-api==1.10.1
     # via tox
