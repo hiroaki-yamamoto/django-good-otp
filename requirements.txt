@@ -4,7 +4,7 @@
 #
 #    pip-compile
 #
-asgiref==3.11.1
+asgiref==3.12.1
     # via django
 build==1.5.1
     # via pip-tools
@@ -16,13 +16,13 @@ click==8.4.2
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.15.1
+coverage==7.15.2
     # via -r requirements.in
 distlib==0.4.3
     # via virtualenv
 django==6.0.7
     # via -r requirements.in
-filelock==3.29.7
+filelock==3.30.3
     # via
     #   tox
     #   virtualenv
@@ -71,7 +71,7 @@ snowballstemmer==3.1.1
     # via pydocstyle
 sqlparse==0.5.5
     # via django
-tox==4.56.4
+tox==4.57.0
     # via -r requirements.in
 virtualenv==21.6.1
     # via tox
