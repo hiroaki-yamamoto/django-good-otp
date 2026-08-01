@@ -22,7 +22,7 @@ distlib==0.4.3
     # via virtualenv
 django==6.0.7
     # via -r requirements.in
-filelock==3.32.0
+filelock==3.32.2
     # via
     #   tox
     #   virtualenv
@@ -73,7 +73,7 @@ sqlparse==0.5.5
     # via django
 tox==4.58.0
     # via -r requirements.in
-virtualenv==21.7.0
+virtualenv==21.7.1
     # via tox
 wheel==0.47.0
     # via pip-tools
