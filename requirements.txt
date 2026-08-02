@@ -8,7 +8,7 @@ asgiref==3.12.1
     # via django
 build==1.5.1
     # via pip-tools
-cachetools==7.1.6
+cachetools==7.1.7
     # via tox
 chardet==7.4.3
     # via tox
