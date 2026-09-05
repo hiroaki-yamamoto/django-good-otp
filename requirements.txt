@@ -8,7 +8,7 @@ asgiref==3.12.1
     # via django
 build==1.6.0
     # via pip-tools
-cachetools==7.1.7
+cachetools==7.1.8
     # via tox
 chardet==7.6.0
     # via tox
@@ -20,9 +20,9 @@ coverage==7.16.0
     # via -r requirements.in
 distlib==0.4.3
     # via virtualenv
-django==6.1
+django==6.1.1
     # via -r requirements.in
-filelock==3.32.4
+filelock==3.32.5
     # via
     #   tox
     #   virtualenv
@@ -45,7 +45,7 @@ packaging==26.3
     #   tox
 pip-tools==7.6.1
     # via -r requirements.in
-platformdirs==4.11.5
+platformdirs==4.11.7
     # via
     #   tox
     #   virtualenv
@@ -71,9 +71,9 @@ snowballstemmer==3.1.1
     # via pydocstyle
 sqlparse==0.6.0
     # via django
-tox==4.61.1
+tox==4.61.2
     # via -r requirements.in
-virtualenv==21.7.7
+virtualenv==21.7.8
     # via tox
 wheel==0.48.0
     # via pip-tools
