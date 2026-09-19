@@ -71,9 +71,9 @@ snowballstemmer==3.1.1
     # via pydocstyle
 sqlparse==0.6.0
     # via django
-tox==4.62.0
+tox==4.63.0
     # via -r requirements.in
-virtualenv==21.7.16
+virtualenv==21.8.1
     # via tox
 wheel==0.48.0
     # via pip-tools
