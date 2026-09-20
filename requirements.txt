@@ -73,7 +73,7 @@ sqlparse==0.6.0
     # via django
 tox==4.63.0
     # via -r requirements.in
-virtualenv==21.8.1
+virtualenv==21.9.0
     # via tox
 wheel==0.48.0
     # via pip-tools
