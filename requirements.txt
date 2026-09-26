@@ -25,7 +25,7 @@ filelock==3.32.7
     #   python-discovery
     #   tox
     #   virtualenv
-flake8==7.3.0
+flake8==7.4.1
     # via
     #   -r requirements.in
     #   flake8-docstrings
@@ -45,13 +45,13 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.1
     # via -r requirements.in
-platformdirs==4.11.11
+platformdirs==4.12.0
     # via
     #   tox
     #   virtualenv
 pluggy==1.6.0
     # via tox
-pycodestyle==2.14.0
+pycodestyle==2.15.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
@@ -77,9 +77,9 @@ sqlparse==0.6.0
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.63.0
+tox==4.64.3
     # via -r requirements.in
-virtualenv==21.9.0
+virtualenv==21.13.0
     # via tox
 wheel==0.48.0
     # via pip-tools
