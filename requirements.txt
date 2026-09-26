@@ -20,7 +20,7 @@ distlib==0.4.3
     # via virtualenv
 django==6.1.1
     # via -r requirements.in
-filelock==3.32.7
+filelock==4.0.4
     # via
     #   python-discovery
     #   tox
@@ -55,7 +55,7 @@ pycodestyle==2.14.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
-pyflakes==3.4.0
+pyflakes==4.0.0
     # via flake8
 pyotp==2.10.0
     # via -r requirements.in
