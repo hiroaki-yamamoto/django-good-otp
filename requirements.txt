@@ -20,7 +20,7 @@ distlib==0.4.3
     # via virtualenv
 django==6.1.1
     # via -r requirements.in
-filelock==4.0.4
+filelock==4.0.9
     # via
     #   python-discovery
     #   tox
@@ -33,7 +33,7 @@ flake8-docstrings==1.7.0
     # via -r requirements.in
 jinja2==3.1.6
     # via -r requirements.in
-markupsafe==3.0.3
+markupsafe==3.0.4
     # via jinja2
 mccabe==0.7.0
     # via flake8
@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.1
     # via -r requirements.in
-platformdirs==4.12.0
+platformdirs==4.12.2
     # via
     #   tox
     #   virtualenv
@@ -55,7 +55,7 @@ pycodestyle==2.15.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
-pyflakes==4.0.0
+pyflakes==4.0.1
     # via flake8
 pyotp==2.10.0
     # via -r requirements.in
@@ -77,9 +77,9 @@ sqlparse==0.6.0
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.64.4
+tox==4.64.7
     # via -r requirements.in
-virtualenv==21.13.0
+virtualenv==21.14.5
     # via tox
 wheel==0.48.0
     # via pip-tools
