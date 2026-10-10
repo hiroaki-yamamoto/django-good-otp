@@ -59,7 +59,7 @@ pyflakes==4.0.3
     # via flake8
 pyotp==2.10.0
     # via -r requirements.in
-pyproject-api==1.11.4
+pyproject-api==1.11.5
     # via tox
 pyproject-hooks==1.3.3
     # via
