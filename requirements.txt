@@ -65,7 +65,7 @@ pyproject-hooks==1.3.3
     # via
     #   build
     #   pip-tools
-python-discovery==1.6.1
+python-discovery==1.6.2
     # via
     #   tox
     #   virtualenv
