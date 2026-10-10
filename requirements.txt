@@ -77,7 +77,7 @@ sqlparse==0.6.0
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.65.0
+tox==4.65.1
     # via -r requirements.in
 virtualenv==21.14.6
     # via tox
