@@ -20,7 +20,7 @@ distlib==0.4.3
     # via virtualenv
 django==6.1.2
     # via -r requirements.in
-filelock==4.1.0
+filelock==4.1.1
     # via
     #   python-discovery
     #   tox
