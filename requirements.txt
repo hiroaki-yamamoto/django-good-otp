@@ -20,7 +20,7 @@ distlib==0.4.4
     # via virtualenv
 django==6.1.2
     # via -r requirements.in
-filelock==4.2.0
+filelock==4.2.1
     # via
     #   python-discovery
     #   tox
@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.2
     # via -r requirements.in
-platformdirs==4.13.3
+platformdirs==4.13.4
     # via
     #   tox
     #   virtualenv
@@ -77,9 +77,9 @@ sqlparse==0.6.0
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.66.0
+tox==4.67.0
     # via -r requirements.in
-virtualenv==21.14.8
+virtualenv==21.14.10
     # via tox
 wheel==0.48.0
     # via pip-tools
