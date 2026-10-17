@@ -8,7 +8,7 @@ asgiref==3.12.1
     # via django
 build==1.6.1
     # via pip-tools
-cachetools==7.2.2
+cachetools==7.2.3
     # via tox
 click==8.5.0
     # via pip-tools
