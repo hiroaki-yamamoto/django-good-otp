@@ -4,23 +4,23 @@
 #
 #    pip-compile --no-index
 #
-asgiref==3.12.1
+asgiref==3.13.0
     # via django
 build==1.6.1
     # via pip-tools
-cachetools==7.2.3
+cachetools==7.2.4
     # via tox
 click==8.5.0
     # via pip-tools
 colorama==0.4.6
     # via tox
-coverage==7.16.2
+coverage==7.17.0
     # via -r requirements.in
 distlib==0.4.4
     # via virtualenv
 django==6.1.2
     # via -r requirements.in
-filelock==4.2.2
+filelock==4.2.4
     # via
     #   python-discovery
     #   tox
@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.2
     # via -r requirements.in
-platformdirs==4.13.4
+platformdirs==4.13.5
     # via
     #   tox
     #   virtualenv
@@ -65,7 +65,7 @@ pyproject-hooks==1.3.3
     # via
     #   build
     #   pip-tools
-python-discovery==1.6.3
+python-discovery==1.6.4
     # via
     #   tox
     #   virtualenv
@@ -79,7 +79,7 @@ tomli-w==1.2.0
     # via tox
 tox==4.67.1
     # via -r requirements.in
-virtualenv==21.14.11
+virtualenv==21.14.13
     # via tox
 wheel==0.48.0
     # via pip-tools
