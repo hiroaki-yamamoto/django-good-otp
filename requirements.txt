@@ -8,7 +8,7 @@ asgiref==3.13.0
     # via django
 build==1.6.1
     # via pip-tools
-cachetools==7.2.7
+cachetools==7.2.8
     # via tox
 click==8.5.0
     # via pip-tools
@@ -20,7 +20,7 @@ distlib==0.4.4
     # via virtualenv
 django==6.1.2
     # via -r requirements.in
-filelock==4.2.5
+filelock==4.2.6
     # via
     #   python-discovery
     #   tox
@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.2
     # via -r requirements.in
-platformdirs==4.14.0
+platformdirs==4.14.2
     # via
     #   tox
     #   virtualenv
