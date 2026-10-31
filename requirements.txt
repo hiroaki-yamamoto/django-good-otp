@@ -8,7 +8,7 @@ asgiref==3.13.0
     # via django
 build==1.6.1
     # via pip-tools
-cachetools==7.2.5
+cachetools==7.2.7
     # via tox
 click==8.5.0
     # via pip-tools
@@ -20,12 +20,12 @@ distlib==0.4.4
     # via virtualenv
 django==6.1.2
     # via -r requirements.in
-filelock==4.2.4
+filelock==4.2.5
     # via
     #   python-discovery
     #   tox
     #   virtualenv
-flake8==7.4.1
+flake8==7.5.0
     # via
     #   -r requirements.in
     #   flake8-docstrings
@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.2
     # via -r requirements.in
-platformdirs==4.13.5
+platformdirs==4.14.0
     # via
     #   tox
     #   virtualenv
@@ -55,17 +55,17 @@ pycodestyle==2.15.0
     # via flake8
 pydocstyle==6.3.0
     # via flake8-docstrings
-pyflakes==4.0.3
+pyflakes==4.1.0
     # via flake8
 pyotp==2.10.0
     # via -r requirements.in
-pyproject-api==1.12.0
+pyproject-api==1.12.2
     # via tox
 pyproject-hooks==1.3.3
     # via
     #   build
     #   pip-tools
-python-discovery==1.6.4
+python-discovery==1.9.0
     # via
     #   tox
     #   virtualenv
@@ -77,9 +77,9 @@ sqlparse==0.6.0
     # via django
 tomli-w==1.2.0
     # via tox
-tox==4.67.1
+tox==4.67.4
     # via -r requirements.in
-virtualenv==21.14.13
+virtualenv==21.15.2
     # via tox
 wheel==0.48.0
     # via pip-tools
