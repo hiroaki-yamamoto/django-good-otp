@@ -45,7 +45,7 @@ packaging==26.3
     #   wheel
 pip-tools==7.6.2
     # via -r requirements.in
-platformdirs==4.14.2
+platformdirs==4.14.3
     # via
     #   tox
     #   virtualenv
@@ -73,7 +73,7 @@ qrcode==8.2
     # via -r requirements.in
 snowballstemmer==3.1.1
     # via pydocstyle
-sqlparse==0.6.0
+sqlparse==0.6.1
     # via django
 tomli-w==1.2.0
     # via tox
